@@ -1,2 +1,0 @@
-print("Moi")
-print('Moi')
