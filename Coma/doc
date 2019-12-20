@@ -1,0 +1,5 @@
+
+
+Tämä auttoi
+
+gcc gnome.c -o gtk1 `pkg-config gtk+-3.0 --cflags --libs`
