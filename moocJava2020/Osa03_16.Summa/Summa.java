@@ -10,6 +10,7 @@ public class Summa {
     public static int summa(ArrayList<Integer> luvut) {
         int summa = 0;
         for(int luku : luvut) {
+            // += on parempi
             summa = summa + luku;
         }
         return summa;
