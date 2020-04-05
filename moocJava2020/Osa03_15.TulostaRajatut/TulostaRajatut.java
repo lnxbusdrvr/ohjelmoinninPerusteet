@@ -25,6 +25,7 @@ public class TulostaRajatut {
     
     public static void tulostaRajatutLuvut(ArrayList<Integer> luvut, int alaraja, int ylaraja) {
         for(int i : luvut) {
+            // suurempi, tai yhtäsuuri kuin
             if(i >= alaraja) {
                 if(i <= ylaraja) {
                     System.out.println(i);
