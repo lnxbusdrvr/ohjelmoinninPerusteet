@@ -24,6 +24,7 @@ public class AlkioidenArvojenVaihtaminen {
         int eka = Integer.valueOf(lukija.nextLine());
         int toka = Integer.valueOf(lukija.nextLine());
         
+        // Vaihdetaan päittäin
         int apulainen = taulukko[eka];
         taulukko[eka] = taulukko[toka];
         taulukko[toka] = apulainen;
