@@ -19,3 +19,26 @@
  * loppui
  */
  
+
+import java.util.Scanner;
+
+public class SanatRiveittain {
+
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+        
+        while(true) {
+            String syote = lukija.nextLine();
+        
+            String[] paloita = syote.split(" ");
+            
+            if(0 == paloita.length -1) {
+                System.out.println(paloita[0]);
+                break;
+            }
+            for(String i : paloita) {
+                System.out.println(i);
+            }
+        }
+    }
+}
