@@ -33,3 +33,41 @@
  *
  */
  
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class HenkilotietojenTarkastelu {
+
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+        
+        int lukumaara = 0;
+        int summa = 0;
+        int sananPituus = 0;
+        String pisinNimi = null;
+        
+        while(true) {
+            String lukulaite = lukija.nextLine();
+            
+            if(lukulaite.equals("")) {
+                break;
+            }
+            
+            String[] luoAlkiot = lukulaite.split(",");
+            
+            for(String alkio : luoAlkiot) {
+                int sanaApu = luoAlkiot[0].length();
+                String nimi = luoAlkiot[0];
+                summa += Integer.parseInt(luoAlkiot[1]);
+                lukumaara++;
+                if(sanaApu > sananPituus) {
+                    sananPituus = sanaApu;
+                    pisinNimi = nimi;
+                }
+            }
+        }
+        double keskiarvo = (double)summa / lukumaara;
+        System.out.println("Pisin nimi: "+pisinNimi);
+        System.out.println("Syntymävuosien keskiarvo: "+keskiarvo);
+    }
+}
