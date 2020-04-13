@@ -33,3 +33,17 @@
  * Kvaak
  *
  */
+
+
+public class Pilli {
+    private String aani;
+    
+    // Konstruktori
+    public Pilli(String pillinAani) {
+        this.aani = pillinAani;
+    }
+    
+    public void soi() {
+        System.out.println(aani);
+    }
+}
