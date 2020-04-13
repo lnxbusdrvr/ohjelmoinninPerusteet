@@ -23,3 +23,16 @@
  *
  */
  
+
+public class Ovi {
+    
+    // Konstruktori
+    public Ovi() {        
+    }
+    
+    // Metodi
+    public void koput() {
+            System.out.println("Who's there?");
+    }
+}
+
