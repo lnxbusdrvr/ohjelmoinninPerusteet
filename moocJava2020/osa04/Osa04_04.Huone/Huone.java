@@ -21,3 +21,14 @@
  *
  */
  
+
+public class Huone {
+    private String koodi;
+    private int istumapaikat;
+    
+    // Konstruktori
+    public Huone(String koodi, int istumapaikat) {
+        this.koodi = koodi;
+        this.istumapaikat = istumapaikat;
+    }
+}
