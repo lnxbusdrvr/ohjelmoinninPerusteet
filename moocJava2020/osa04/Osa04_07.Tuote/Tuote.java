@@ -31,3 +31,21 @@
  *
  */
  
+
+public class Tuote {
+    private String nimi;
+    private double hinta;
+    private int lkm;
+    
+    // Konstruktori
+    public Tuote(String nimiAlussa, double hintaAlussa, int maaraAlussa) {
+        this.nimi = nimiAlussa;
+        this.hinta = hintaAlussa;
+        this.lkm = maaraAlussa;
+    }
+    
+    // Metodi
+    public void tulostaTuote() {
+        System.out.println(nimi+ ", "+hinta+ ", " +lkm+ " kpl");
+    }    
+}
