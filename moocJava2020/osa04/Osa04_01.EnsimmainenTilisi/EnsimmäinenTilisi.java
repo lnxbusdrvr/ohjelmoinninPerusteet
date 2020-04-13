@@ -26,3 +26,19 @@
  *
  */
  
+public class EnsimmainenTilisi {
+
+    public static void main(String[] args) {
+        // Tili.Java:ssa olevaan koodiin ei tule koskea
+        // tee ohjelmasi tänne
+        
+        // Luodaan luokalla Tili artonKolmasTili-niminen olio, laitetaan
+        // saldoksi 100€
+        Tili artonKolmasTili = new Tili("Arton kolmas tili", 100);
+        
+        // Pano 20€
+        artonKolmasTili.pano(20);
+        
+        System.out.println(artonKolmasTili);
+    }
+}
