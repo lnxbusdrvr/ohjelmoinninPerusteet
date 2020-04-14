@@ -27,3 +27,24 @@
  */
  
  
+
+public class Musiikkikappale {
+    private String nimi;
+    private int pituus;
+    
+    // Konsruktori
+    public Musiikkikappale(String kappaleenNimi, int kappaleenPituus) {
+        this.nimi = kappaleenNimi;
+        this.pituus = kappaleenPituus;
+    }
+    
+    // Metodit
+    public String nimi() {
+        return nimi;
+    }
+    
+    public int pituus() {
+        return pituus;
+    }
+}
+
