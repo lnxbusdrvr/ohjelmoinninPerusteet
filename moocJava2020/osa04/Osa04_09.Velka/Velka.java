@@ -17,3 +17,25 @@
 * Velan määrän kasvattaminen tapahtuu kertomalla saldo korkokertoimella.
 *
 */
+
+
+
+public class Velka {
+    private double saldo;
+    private double korkokerroin;
+    
+    // Konstruktori
+    public Velka(double saldoAlussa, double korkokerroinAlussa) {
+        this.saldo = saldoAlussa;
+        this.korkokerroin = korkokerroinAlussa;
+    }
+    
+    // Methodit
+    public void tulostaSaldo() {
+        System.out.println(this.saldo);
+    }
+    
+    public void odotaVuosi() {
+        this.saldo = this.saldo * this.korkokerroin;
+    }   
+}
