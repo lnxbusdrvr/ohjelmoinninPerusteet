@@ -19,3 +19,7 @@
  *
  */
  
+    public String toString() {
+        return "My name is " +this.sukunimi+", "+etunimi+" "+this.sukunimi;
+    }
+}
