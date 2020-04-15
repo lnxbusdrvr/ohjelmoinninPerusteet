@@ -11,3 +11,17 @@
  *
  */
  
+
+public class Kertoja {
+    private int luku;
+    
+    // Konstructori
+    public Kertoja(int luku) {
+        this.luku = luku;
+    }
+    
+    // Metodit
+    public int kerro(int luku) {
+        return this.luku * luku;
+    }
+}
