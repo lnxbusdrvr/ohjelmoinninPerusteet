@@ -97,11 +97,23 @@ public class Maksukortti {
     
     //Metodit
     public void syoEdullisesti() {
-        this.saldo = this.saldo - 2.60;
+        double edullinen = 2.60;
+        
+        if(this.saldo < edullinen) {
+            this.saldo = this.saldo;    
+        }else{
+            this.saldo = this.saldo - edullinen;
+        }
     }
     
     public void syoMaukkaasti() {
-        this.saldo = this.saldo - 4.60;
+        double maukas = 4.60;
+        
+        if(this.saldo < maukas) {
+            this.saldo = this.saldo;    
+        }else{
+            this.saldo = this.saldo - maukas;
+        }        
     }
     
     public String toString() {
