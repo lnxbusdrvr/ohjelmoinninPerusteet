@@ -96,6 +96,14 @@ public class Maksukortti {
     }
     
     //Metodit
+    public void syoEdullisesti() {
+        this.saldo = this.saldo - 2.60;
+    }
+    
+    public void syoMaukkaasti() {
+        this.saldo = this.saldo - 4.60;
+    }
+    
     public String toString() {
         return "Kortilla on rahaa " +this.saldo+ " euroa";
     }
