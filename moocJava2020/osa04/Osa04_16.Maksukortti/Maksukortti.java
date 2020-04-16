@@ -117,7 +117,11 @@ public class Maksukortti {
     }
  
     public void lataaRahaa(double rahamaara) {
-        this.saldo = this.saldo + rahamaara;
+        if(rahamaara <= 0) {
+            this.saldo = this.saldo;
+        }else{
+            this.saldo = this.saldo + rahamaara;
+        }
     }
     
     public String toString() {
