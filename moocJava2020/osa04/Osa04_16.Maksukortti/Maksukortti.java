@@ -86,4 +86,17 @@
  *
  */
  
- 
+
+public class Maksukortti {
+    private double saldo;
+    
+    // Konstruktori
+    public Maksukortti(double alkuSaldo) {
+        this.saldo = alkuSaldo;
+    }
+    
+    //Metodit
+    public String toString() {
+        return "Kortilla on rahaa " +this.saldo+ " euroa";
+    }
+} 
