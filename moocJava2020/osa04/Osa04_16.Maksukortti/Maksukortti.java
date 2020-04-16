@@ -115,6 +115,10 @@ public class Maksukortti {
             this.saldo = this.saldo - maukas;
         }        
     }
+ 
+    public void lataaRahaa(double rahamaara) {
+        this.saldo = this.saldo + rahamaara;
+    }
     
     public String toString() {
         return "Kortilla on rahaa " +this.saldo+ " euroa";
