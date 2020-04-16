@@ -128,3 +128,4 @@ public class Maksukortti {
         return "Kortilla on rahaa " +this.saldo+ " euroa";
     }
 } 
+// Luokka valmis
