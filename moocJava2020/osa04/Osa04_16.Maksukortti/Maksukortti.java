@@ -87,6 +87,7 @@
  */
  
 
+
 public class Maksukortti {
     private double saldo;
     
@@ -115,17 +116,19 @@ public class Maksukortti {
             this.saldo = this.saldo - maukas;
         }        
     }
- 
+    
     public void lataaRahaa(double rahamaara) {
-        if(rahamaara <= 0) {
-            this.saldo = this.saldo;
-        }else{
-            this.saldo = this.saldo + rahamaara;
-        }
+        // Hyväksytään vain positiiviset luvut
+        if(rahamaara > 0) {
+            if(this.saldo + rahamaara >= 150.0) {
+                this.saldo = 150.0;
+            }else{
+                this.saldo = this.saldo + rahamaara;
+            }
+        }    
     }
     
     public String toString() {
         return "Kortilla on rahaa " +this.saldo+ " euroa";
     }
-} 
-// Luokka valmis
+}
