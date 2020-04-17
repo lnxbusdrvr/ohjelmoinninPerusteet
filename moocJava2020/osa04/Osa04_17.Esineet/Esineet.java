@@ -23,7 +23,7 @@
  *
  */
  
- 
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -34,6 +34,22 @@ public class Esineet {
 
         ArrayList<Esine> esineet = new ArrayList<>();
         Scanner lukija = new Scanner(System.in);
+        
+        System.out.print("Nimi: ");
+        String nimi = lukija.nextLine();
+        
+        while(!nimi.isEmpty()) {
+            
+            // Lisää listalle
+            esineet.add(new Esine(nimi));
+            
+            System.out.print("Nimi: ");
+            nimi = lukija.nextLine();
+        }
+        
+        for(Esine esi : esineet) {
+            System.out.println(esi);
+        }
 
     }
 }
