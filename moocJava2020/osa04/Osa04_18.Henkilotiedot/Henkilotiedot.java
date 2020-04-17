@@ -34,6 +34,7 @@
  */
  
  
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -44,6 +45,29 @@ public class Henkilotiedot {
 
         ArrayList<Henkilotieto> henkilotiedot = new ArrayList<>();
         Scanner lukija = new Scanner(System.in);
-
+        
+        
+        
+        while(true) {
+            System.out.print("Etunimi: ");
+            String etunimi = lukija.nextLine();
+            
+            //Mikäli tyhjä. Lopetetaan looppi
+            if(etunimi.isEmpty()) {
+                break;
+            }
+            
+            System.out.print("Sukunimi: ");
+            String sukunimi = lukija.nextLine();
+            
+            System.out.print("Henkilötunnus: ");
+            String hetu = lukija.nextLine();
+            
+            // Lisätään tiedot listaan
+            henkilotiedot.add(new Henkilotieto(etunimi, sukunimi, hetu));                                  
+        }
+        for(Henkilotieto henk : henkilotiedot) {
+            System.out.println("\n"+henk.getEtunimi()+" "+henk.getSukunimi());
+        }               
     }
 }
