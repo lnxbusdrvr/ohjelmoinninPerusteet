@@ -38,3 +38,22 @@
  *
  */
  
+public class Kirja {
+    private String nimi;
+    private int sivuja;
+    private int vuosi;
+    
+    public Kirja(String asetaNimi, int asetaSivuja, int asetaVuosi) {
+        this.nimi = asetaNimi;
+        this.sivuja = asetaSivuja;
+        this.vuosi = asetaVuosi;
+    }
+    
+    public String getNimi() {
+        return this.nimi;
+    }
+    
+    public String toString() {
+        return this.nimi+", "+this.sivuja+" sivua, "+this.sivuja;
+    }
+}
