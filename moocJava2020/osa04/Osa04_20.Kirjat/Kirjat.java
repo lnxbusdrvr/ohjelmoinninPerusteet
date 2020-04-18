@@ -54,6 +54,6 @@ public class Kirja {
     }
     
     public String toString() {
-        return this.nimi+", "+this.sivuja+" sivua, "+this.sivuja;
+        return this.nimi+", "+this.sivuja+" sivua, "+this.vuosi;
     }
 }
