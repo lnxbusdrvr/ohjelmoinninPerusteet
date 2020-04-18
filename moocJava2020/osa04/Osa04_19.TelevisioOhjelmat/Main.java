@@ -25,7 +25,8 @@
  * Miehen puolikkaat, 30 minuuttia
  *
  */
- 
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -36,6 +37,27 @@ public class Main {
 
         ArrayList<TelevisioOhjelma> ohjelmat = new ArrayList<>();
         Scanner lukija = new Scanner(System.in);
-
+        
+        while(true) {
+            System.out.print("Nimi: ");
+            String nimi = lukija.nextLine();
+            
+            // Mikäli nimi tyhjää, lopeta
+            if(nimi.isEmpty()) {
+                break;
+            }
+            System.out.print("Nimi: ");
+            int pituus = Integer.valueOf(lukija.nextLine());
+            
+            ohjelmat.add(new TelevisioOhjelma(nimi, pituus));
+        }
+        System.out.print("Ohjelman maksimipituus? ");
+        int maxPituus = Integer.valueOf(lukija.nextLine());
+        
+        for( TelevisioOhjelma tele : ohjelmat ) {
+            if(tele.getPituus() == maxPituus) {
+                System.out.println(tele);                
+            }
+        }
     }
 }
