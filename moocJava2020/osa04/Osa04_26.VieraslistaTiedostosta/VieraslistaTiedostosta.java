@@ -23,7 +23,6 @@
  *
  */
  
- // Valmiina ollut koodi:
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -38,24 +37,34 @@ public class VieraslistaTiedostosta {
         String tiedosto = lukija.nextLine();
 
         ArrayList<String> lista = new ArrayList<>();
-        // toteuta tiedoston lukeminen tässä.
-        System.out.println("");
+        
+        try{
+            Scanner tiedostonLukija = new Scanner(Paths.get(tiedosto));
+            while(tiedostonLukija.hasNextLine()) {
+                String rivi = tiedostonLukija.nextLine();
+                lista.add(rivi);
+            }
+            
+            // toteuta tiedoston lukeminen tässä.
+            System.out.println("");
 
-        System.out.println("Syötä nimiä, tyhjä rivi lopettaa.");
-        while (true) {
-            String nimi = lukija.nextLine();
-            if (nimi.isEmpty()) {
-                break;
+            System.out.println("Syötä nimiä, tyhjä rivi lopettaa.");
+            while (true) {
+                String nimi = lukija.nextLine();
+                if (nimi.isEmpty()) {
+                    break;
+                }
+
+                if (lista.contains(nimi)) {
+                    System.out.println("Nimi on listalla.");
+                } else {
+                    System.out.println("Nimi ei ole listalla.");
+                }
             }
 
-            if (lista.contains(nimi)) {
-                System.out.println("Nimi on listalla.");
-            } else {
-                System.out.println("Nimi ei ole listalla.");
-            }
+            System.out.println("Kiitos!");
+        }catch(Exception e) {
+            System.out.println("Virhe: " +e.getMessage());
         }
-
-        System.out.println("Kiitos!");
     }
 }
-// Valmiina ollut koodi loppuu
