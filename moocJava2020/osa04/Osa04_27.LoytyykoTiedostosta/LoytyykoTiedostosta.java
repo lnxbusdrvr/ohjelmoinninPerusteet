@@ -32,19 +32,46 @@
  *
  */
  
+
 import java.nio.file.Paths;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class LoytyykoTiedostosta {
 
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
+                  
+        try{
+            Scanner lukija = new Scanner(System.in);
+            
+            // Alustetaan lista
+            ArrayList<String> lista = new ArrayList<>();
 
-        System.out.println("Minkä niminen tiedosto luetaan? ");
-        String tiedosto = lukija.nextLine();
+            System.out.println("Minkä niminen tiedosto luetaan? ");
+            String tiedosto = lukija.nextLine();
 
-        System.out.println("Mitä etsitään?");
-        String etsittava = lukija.nextLine();
-
+            System.out.println("Mitä etsitään?");
+            String etsittava = lukija.nextLine();
+            
+            Scanner tiedostonLukija = new Scanner(Paths.get(tiedosto));
+            
+            // Käy tiedosto läpi, kunnes rivit loppuu.
+            while(tiedostonLukija.hasNextLine()) {
+                String rivi = tiedostonLukija.nextLine();
+                
+                // Lisätään jokainen rivi listaan
+                lista.add(rivi);
+            }
+            // Jos löytyy etsittävä sana
+            if(lista.contains(etsittava)) {
+                System.out.println("Löytyi!");
+            }
+            // Jos ei löydy etsittävää sana
+            if(!lista.contains(etsittava)) {
+                System.out.println("Ei löytynyt.");
+            }
+        }catch(Exception e) {
+            System.out.println("Tiedoston "+e.getMessage()+" lukeminen epäonnistui.");
+        }
     }
 }
