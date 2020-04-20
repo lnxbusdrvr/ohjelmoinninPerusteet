@@ -31,6 +31,7 @@
  
 import java.nio.file.Paths;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class MittauksetTiedostosta {
 
@@ -43,7 +44,28 @@ public class MittauksetTiedostosta {
         int alaraja = Integer.valueOf(lukija.nextLine());
         System.out.print("Yläraja? ");
         int ylaraja = Integer.valueOf(lukija.nextLine());
-
+        
+        try{
+            Scanner tstoLukija = new Scanner(Paths.get(tiedosto));
+            
+            ArrayList<Integer> lista = new ArrayList<>();
+            
+            // Lue tiedosto, kunnes rivit loppuu
+            while(tstoLukija.hasNextLine()) {
+                int rivi = Integer.valueOf(tstoLukija.nextLine());
+                // listätään tiedoston syöte listaan
+                lista.add(rivi);
+            }
+            int lkm = 0;
+            for(int luvut : lista) {
+                if(luvut >= alaraja && luvut <= ylaraja) {
+                    lkm++;
+                }
+            }
+            System.out.println("Lukuja: "+lkm);
+            
+        }catch(Exception e) {
+            System.out.println("Virhe: "+e.getMessage());
+        }
     }
-
 }
