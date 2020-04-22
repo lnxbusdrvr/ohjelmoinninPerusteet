@@ -26,8 +26,8 @@
  * Muokkaa tehtävässä vain metodia lueHenkilot.
  *
  */
- 
- 
+  
+
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -53,7 +53,22 @@ public class HenkilotTiedostosta {
         ArrayList<Henkilo> henkilot = new ArrayList<>();
 
         // toteuta henkilöiden lukeminen ja luominen tänne
+        try{
+            Scanner tiedostonLukija = new Scanner(Paths.get(tiedosto));
+            
+            while(tiedostonLukija.hasNextLine()) {
+                String rivi = tiedostonLukija.nextLine();
+            
+                String[] taulukko = rivi.split(",");
+                String nimi = taulukko[0];
+                int ika = Integer.valueOf(taulukko[1]);
+            
+                henkilot.add(new Henkilo(nimi, ika));
+            }
+            
+        }catch(Exception e) {
+            System.out.println("Virhe: "+e.getMessage());
+        }
         return henkilot;
-
     }
 }
