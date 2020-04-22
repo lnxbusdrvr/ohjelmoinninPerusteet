@@ -27,6 +27,7 @@
  *
  */
  
+
 import java.nio.file.Paths;
 import java.util.Scanner;
 
@@ -34,6 +35,28 @@ public class TiedotTiedostosta {
 
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
-
+                
+        try{
+            System.out.println("Mikä tiedosto luetaan?");
+            String tiedosto = lukija.nextLine();
+            
+            Scanner tdstoLukija = new Scanner(Paths.get(tiedosto));
+            
+            while(tdstoLukija.hasNextLine()) {
+                String rivi = tdstoLukija.nextLine();
+                
+                String[] taulukko = rivi.split(",");
+                String nimi = taulukko[0];
+                int ika = Integer.valueOf(taulukko[1]);
+                
+                if(ika == 1) {
+                    System.out.println(nimi+", ikä: "+ika+" vuosi");
+                }else{
+                    System.out.println(nimi+", ikä: "+ika+" vuotta");
+                }
+            }
+        }catch(Exception e) {
+            System.out.println("Virhe: "+e.getMessage());
+        }
     }
 }
