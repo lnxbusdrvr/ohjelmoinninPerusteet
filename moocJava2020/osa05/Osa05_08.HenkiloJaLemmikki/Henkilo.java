@@ -39,7 +39,7 @@
 
     @Override
     public String toString() {
-        return this.nimi;
+        return this.nimi+", kaverina "+lemmikki.getNimi()+", joka on "+lemmikki.getRotu();
     }
 
 }
