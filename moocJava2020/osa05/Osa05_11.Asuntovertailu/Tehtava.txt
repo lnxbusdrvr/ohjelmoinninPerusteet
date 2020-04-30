@@ -1,0 +1,55 @@
+Osa 1
+-----
+
+Tee metodi public boolean suurempi(Asunto verrattava) 
+joka palauttaa true jos asunto-olio, 
+jolle metodia kutsutaan, on pinta-alaltaan suurempi 
+kuin verrattavana oleva asunto-olio.
+
+Esimerkki metodin toiminnasta:
+
+  Asunto eiraYksio = new Asunto(1, 16, 5500);
+  Asunto kallioKaksio = new Asunto(2, 38, 4200);
+  Asunto jakomakiKolmio = new Asunto(3, 78, 2500);
+
+  System.out.println(eiraYksio.suurempi(kallioKaksio));       // false
+  System.out.println(jakomakiKolmio.suurempi(kallioKaksio));  // true
+
+Osa 2
+-----
+
+Tee metodi 
+public int hintaero(Asunto verrattava) 
+
+joka palauttaa asunto-olion jolle metodia 
+kutsuttiin ja parametrina olevan asunto-olion hintaeron. 
+Hintaero on asuntojen hintojen 
+erotuksen (hinta lasketaan kertomalla neliöhinta neliöillä) itseisarvo.
+
+Esimerkki metodin toiminnasta:
+
+  Asunto eiraYksio = new Asunto(1, 16, 5500);
+  Asunto kallioKaksio = new Asunto(2, 38, 4200);
+  Asunto jakomakiKolmio = new Asunto(3, 78, 2500);
+
+  System.out.println(eiraYksio.hintaero(kallioKaksio));        // 71600
+  System.out.println(jakomakiKolmio.hintaero(kallioKaksio));   // 35400
+
+Osa 3
+-----
+
+Tee metodi 
+public boolean kalliimpi(Asunto verrattava) 
+
+joka palauttaa true jos asunto-olio, 
+jolle metodia kutsutaan on kalliimpi 
+kuin verrattavana oleva asunto-olio.
+
+Esimerkki metodin toiminnasta:
+
+  Asunto eiraYksio = new Asunto(1, 16, 5500);
+  Asunto kallioKaksio = new Asunto(2, 38, 4200);
+  Asunto jakomakiKolmio = new Asunto(3, 78, 2500);
+
+  System.out.println(eiraYksio.kalliimpi(kallioKaksio));       // false
+  System.out.println(jakomakiKolmio.kalliimpi(kallioKaksio));   // true
