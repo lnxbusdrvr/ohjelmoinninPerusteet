@@ -27,5 +27,28 @@ public class Kirja {
     public int getJulkaisuvuosi() {
         return julkaisuvuosi;
     }
+    
+    public boolean equals(Object verrattava) {
+        //onko sama paikka
+        if(this == verrattava) {
+            return true;            
+        }
+        
+        // Onko sama tyyppi
+        if(!(verrattava instanceof Kirja)) {
+            return false;
+        }
+        
+        //Tyyppimuunnos
+        Kirja verrattavaKirja = (Kirja)verrattava;
+        
+        //Vertailu
+        if(this.julkaisuvuosi == verrattavaKirja.julkaisuvuosi
+                && this.nimi.equals(verrattavaKirja.nimi)) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }
