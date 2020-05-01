@@ -18,7 +18,12 @@ public class Main {
             System.out.println("Syötä kirjan julkaisuvuosi.");
             int julkaisuvuosi = Integer.valueOf(lukija.nextLine());
             Kirja kirja = new Kirja(nimi, julkaisuvuosi);
-            kirjat.add(kirja);
+                        
+            if(kirjat.contains(kirja)) {
+                System.out.println("Kirja on jo listalla. Ei lisätä samaa kirjaa uudestaan.");
+            }else{
+                kirjat.add(kirja);
+            }
 
         }
         
