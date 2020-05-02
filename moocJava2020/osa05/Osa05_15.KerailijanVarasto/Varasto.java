@@ -23,3 +23,61 @@
  * tulostuksessa käytetään ensimmäisenä syötettyä esinettä.
  *
  */
+
+public class Varasto{
+    private String tunnus;
+    private String nimi;
+    
+    public Varasto(String tunnus, String nimi) {
+        this.tunnus = tunnus;
+        this.nimi = nimi;
+    }
+    
+    public String getTunnus() {
+        return this.tunnus;
+    }
+    
+    public String getNimi() {
+        return this.nimi;
+    }
+    
+    public void setTunnus(String tunnus) {
+        this.tunnus = tunnus;
+    }
+    
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
+    }
+    
+    public boolean equals(Object verrattava) {
+        // Onko sama paikka
+        if(this == verrattava) {
+            return true;
+        }
+        // Onko sama tyyppi
+        if(!(verrattava instanceof Varasto)) {
+            return false;
+        }
+        // Tyyppimuunnos
+        Varasto verrattavaVarasto = (Varasto)verrattava;
+        
+        // Vertaus, vain tunnus
+        if(this.tunnus.equals(verrattavaVarasto.tunnus)) {
+            return true;
+        }else{
+            return false;
+        }
+    }/*
+        if(this.tunnus.equals(verrattavaVarasto.tunnus)
+        && this.nimi.equals(verrattavaVarasto.nimi)) {
+            return true;
+        }else{
+            return false;
+        }
+    }*/
+    
+    @Override
+    public String toString() {
+        return this.tunnus+": "+this.nimi;
+    }
+}
