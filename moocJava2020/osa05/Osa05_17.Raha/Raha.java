@@ -65,5 +65,13 @@ public class Raha {
 
         return this.euroa + "." + nolla + this.senttia + "e";
     }
+    
+    public Raha plus(Raha lisattava) {
+        int euroa = this.euroa + lisattava.euroa;
+        int senttia = this.senttia + lisattava.senttia;
+        Raha uusi = new Raha(euroa, senttia);
+        
+        return uusi;
+    }
 
 }
