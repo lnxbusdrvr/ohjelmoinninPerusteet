@@ -43,6 +43,11 @@
  *     return uusiPaivays;
  * }
  *
+ * Mitä opin:
+ * Lukeemalla ohjeet kunnolla, erityisesti kutsukoodi.
+ * Olisi mennyt tähäänkin tehtävään
+ * huomattavasti vähemmän aikaa.
+ *
  */
 
 public class Paivays {
