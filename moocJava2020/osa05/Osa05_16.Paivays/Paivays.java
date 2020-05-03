@@ -78,5 +78,51 @@ public class Paivays {
 
         return false;
     }
+    
+    public int getPaiva() {
+        return this.paiva; 
+    }
+    
+    public int getKuukausi() {
+        return this.kuukausi; 
+    }
+    
+    public int getVuosi() {
+        return this.vuosi; 
+    }
+    
+    public void etene() {
+        this.paiva++;
+        
+        if(this.paiva > 30) {
+            this.paiva = 1;
+            this.kuukausi++;
+            if(this.kuukausi > 12) {
+                this.kuukausi = 1;
+                this.vuosi++;
+            }
+        }
+    }
+    
+    public void etene(int paivia) {
+        for(int i = 0; i < paivia; i++) {
+            this.etene();
+        }
+    }
+    
+    public Paivays paivienPaasta(int paivia) {
+        // Luodaan laskuria varten uusi olio
+        Paivays uusiPaivays = new Paivays(this.paiva, this.kuukausi, this.vuosi);
+        
+        // Lasketaan päiviä
+        // Ei toimi
+        uusiPaivays.etene(paivia);
+        
+        
+        //return uusiPaivays;
+        // Debuggeri
+        //System.out.println(uusiPaivays);
+        return uusiPaivays;
+    }
 
 }
