@@ -73,5 +73,15 @@ public class Raha {
         
         return uusi;
     }
+    
+    // Osa 3 Koodausaika 6min 44sek
+    public boolean vahemman(Raha verrattava) {
+        if(this.euroa < verrattava.euroa || this.euroa == verrattava.euroa
+                && this.senttia < verrattava.senttia) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }
