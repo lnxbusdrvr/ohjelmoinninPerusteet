@@ -66,6 +66,7 @@ public class Raha {
         return this.euroa + "." + nolla + this.senttia + "e";
     }
     
+    // Osa 1 Koosausaika 2min 44sek
     public Raha plus(Raha lisattava) {
         int euroa = this.euroa + lisattava.euroa;
         int senttia = this.senttia + lisattava.senttia;
@@ -74,7 +75,7 @@ public class Raha {
         return uusi;
     }
     
-    // Osa 3 Koodausaika 6min 44sek
+    // Osa 2 Koodausaika 6min 44sek
     public boolean vahemman(Raha verrattava) {
         if(this.euroa < verrattava.euroa || this.euroa == verrattava.euroa
                 && this.senttia < verrattava.senttia) {
@@ -83,5 +84,26 @@ public class Raha {
             return false;
         }
     }
-
+    
+    // Osa 3 Koodausaika 8min 16sek
+    public Raha miinus(Raha vahentaja) {
+        int euro = this.euroa - vahentaja.eurot();
+        int sentti = this.senttia - vahentaja.sentit();
+        if(sentti < 0) {
+            euro--;
+            sentti += 100;
+        }
+        // Debugger
+        //System.out.println(euro+"."+sentti);
+            
+        if(euro < 0) {
+            euro = 0;
+            sentti = 0;
+            Raha uusi = new Raha(euro, sentti);
+            return uusi;
+        }            
+        
+        Raha uusi = new Raha(euro, sentti);
+        return uusi;
+    }
 }
