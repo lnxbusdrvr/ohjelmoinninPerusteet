@@ -56,5 +56,14 @@ public class Pakka {
     public ArrayList<String> arvot() {
         return this.pakka;
     }
-        
+    
+    public String ota() {
+        int indeksi = this.pakka.size()-1;
+        try{
+            return this.pakka.get(indeksi);
+            // returnin jälkeen
+        }finally{
+            this.pakka.remove(indeksi);
+        }
+    }        
 }
