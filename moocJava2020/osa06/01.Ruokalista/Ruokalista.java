@@ -55,4 +55,9 @@ public class Ruokalista {
             System.out.println(ateria);
         }
     }
+    
+    // Osa 3 Koodausaika 37sek
+    public void tyhjennaRuokalista() {
+        this.ateriat.clear();
+    }
 }
