@@ -41,4 +41,13 @@ public class Ruokalista {
     }
 
     // toteuta tänne tarvittavat metodit
+    
+    // Osa 1 Koodausaika 1min 27sek
+    public void lisaaAteria(String ateria) {
+        if(!this.ateriat.contains(ateria)) {
+            this.ateriat.add(ateria);
+        }
+    }
+    
+    
 }
