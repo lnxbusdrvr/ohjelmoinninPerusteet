@@ -49,5 +49,10 @@ public class Ruokalista {
         }
     }
     
-    
+    // Osa 2 Koodausaika 53sek
+    public void tulostaAteriat() {
+        for(String ateria : this.ateriat) {
+            System.out.println(ateria);
+        }
+    }
 }
