@@ -26,5 +26,21 @@ public class Joukko {
     public ArrayList<String> getAlkiot() {
         return this.alkiot;
     }
+    
+    public String pisin() {
+        if(this.alkiot.isEmpty()) {
+            return null;
+        }
+        //Luo palautettava oliomuuttuja
+        String palautettava = this.alkiot.get(0);
+        
+        // Käy lista läpi
+        for(String joukko : this.alkiot) {
+            if(palautettava.length() < joukko.length()) {
+                palautettava = joukko;
+            }
+        }
+        return palautettava;
+    }
 
 }
