@@ -30,4 +30,23 @@ public class Joukko {
         return this.alkiot;
     }
     
+    public String toString() {
+        String listaTulostus = "";
+        if(this.alkiot.isEmpty()) {
+            return "Joukko "+this.nimi+" on tyhjä.";
+        }if(this.alkiot.size() == 1) {
+            String tulostaYks = "Joukossa "
+                    +this.nimi+" on "+this.alkiot.size()+
+                    " alkio:";
+            return tulostaYks+"\n"+this.alkiot.get(0);
+        }else{
+            String tulostaElse = "Joukossa "
+                    +this.nimi+" on "+this.alkiot.size()+
+                    " alkiota:";
+            for(String lista : this.alkiot) {
+                listaTulostus += lista+"\n";
+            }
+            return tulostaElse+"\n"+listaTulostus;
+        }
+    }    
 }
