@@ -23,7 +23,7 @@ public class Huone {
         return this.henkilot;
     }
     
-    // Osa 2
+    // Osa 2 5min 17sek
     public Henkilo lyhin() {
         if(this.henkilot.isEmpty()) {
             return null;
@@ -38,5 +38,16 @@ public class Huone {
         return lyhin;
     }
     
-    // Osa 3
+    // Osa 3 5min 26sek
+    public Henkilo ota() {
+        try{
+            if(this.henkilot.isEmpty()) {
+            return null;
+            }else{
+                return this.lyhin();
+            }
+        }finally{
+            this.henkilot.remove(this.lyhin());
+        }        
+    }
 }
