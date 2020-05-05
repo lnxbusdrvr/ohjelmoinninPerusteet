@@ -1,0 +1,43 @@
+/*
+ * Osa 1: Huone
+ * ------------
+ *
+ * Luo luokka Huone. 
+ * Luokan Huone tulee sisältää oliomuuttujana listan henkilöitä, 
+ * ja sillä tulee olla parametriton konstruktori. 
+ * Lisää luokalle myös seuraavat metodit: 
+ *
+ * public void lisaa(Henkilo henkilo) 
+ *
+ * lisää huoneeseen parametrina annetun henkilön.
+ * 
+ * public boolean onTyhja() 
+ *
+ * palauttaa boolean-tyyppisen arvon true tai false, 
+ * joka kertoo onko huone tyhjä.
+ * 
+ * public ArrayList<Henkilo> getHenkilot() 
+ *
+ * palauttaa listan huoneessa olevista henkilöistä.
+ * 
+ * Osa 2: Lyhin henkilö
+ * --------------------
+ *
+ * Lisää luokalle Huone metodi 
+ * public Henkilo lyhin(), 
+ *
+ * joka palauttaa huoneeseen lisätyistä henkilöistä lyhimmän. 
+ * Mikäli huone on tyhjä, 
+ * palauttaa null-viitteen. Metodin ei tule poistaa henkilöä huoneesta.
+ *
+ * Osa 3: Huoneesta ottaminen
+ * --------------------------
+ *
+ * Lisää luokalle Huone metodi 
+ * public Henkilo ota(), 
+ *
+ * ottaa huoneesta lyhimmän henkilön. 
+ * Mikäli huone on tyhjä, metodi palauttaa null-viitteen.
+ *
+ */
+
