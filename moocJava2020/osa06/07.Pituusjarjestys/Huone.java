@@ -22,4 +22,21 @@ public class Huone {
     public ArrayList<Henkilo> getHenkilot() {        
         return this.henkilot;
     }
+    
+    // Osa 2
+    public Henkilo lyhin() {
+        if(this.henkilot.isEmpty()) {
+            return null;
+        }
+        Henkilo lyhin = this.henkilot.get(0);
+        
+        for(Henkilo lista : this.henkilot) {
+            if(lyhin.getPituus() > lista.getPituus()) {
+                lyhin = lista;
+            }
+        }
+        return lyhin;
+    }
+    
+    // Osa 3
 }
