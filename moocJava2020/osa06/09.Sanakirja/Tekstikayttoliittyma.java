@@ -13,10 +13,10 @@ public class Tekstikayttoliittyma {
     public void kaynnista() {
         int i = 0;
         while(true) {
+            System.out.print("Komento: ");
             String syote = lukija.nextLine();
             
-            if(syote.equals("lopeta")) {
-                System.out.println("Hei hei!");
+            if(syote.equals("lopeta")) {                
                 break;
             }if(syote.equals("lisaa")) {
                 System.out.print("Sana: ");
@@ -24,15 +24,22 @@ public class Tekstikayttoliittyma {
                 System.out.print("Käännös: ");
                 String kaannos = lukija.nextLine();
                 this.kirja.lisaa(sana, kaannos);
+                continue;
             }if(syote.equals("hae")) {
-                System.out.print("Haettava:");
+                System.out.print("Haettava: ");
                 String hae = lukija.nextLine();
-                this.kirja.equals(hae);
-                System.out.println("Käännös: "+this.kirja.kaanna(hae));                
-            }
-            System.out.println("Tuntemato komentti");
-            i++;
+                if(this.kirja.kaanna(hae) == null) {
+                    System.out.println("Sanaa "+hae+" ei löydy");
+                    continue;
+                }else{
+                    System.out.println("Käännös: "+this.kirja.kaanna(hae));
+                    continue;
+                }                
+            }else{
+                System.out.println("Tuntematon komento");
+                i++;
+            }                  
         }
-        
+        System.out.println("Hei hei!");
     }
 }
