@@ -18,6 +18,12 @@ public class Tekstikayttoliittyma {
             if(syote.equals("lopeta")) {
                 System.out.println("Hei hei!");
                 break;
+            }if(syote.equals("lisaa")) {
+                System.out.print("Sana: ");
+                String sana = lukija.nextLine();
+                System.out.print("Käännös: ");
+                String kaannos = lukija.nextLine();
+                this.kirja.lisaa(sana, kaannos);
             }
             System.out.println("Tuntemato komentti");
             i++;
