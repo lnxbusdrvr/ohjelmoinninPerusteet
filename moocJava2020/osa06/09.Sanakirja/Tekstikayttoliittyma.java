@@ -24,6 +24,11 @@ public class Tekstikayttoliittyma {
                 System.out.print("Käännös: ");
                 String kaannos = lukija.nextLine();
                 this.kirja.lisaa(sana, kaannos);
+            }if(syote.equals("hae")) {
+                System.out.print("Haettava:");
+                String hae = lukija.nextLine();
+                this.kirja.equals(hae);
+                System.out.println("Käännös: "+this.kirja.kaanna(hae));                
             }
             System.out.println("Tuntemato komentti");
             i++;
