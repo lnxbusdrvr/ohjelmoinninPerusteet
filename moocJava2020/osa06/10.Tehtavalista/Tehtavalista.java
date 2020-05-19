@@ -24,6 +24,9 @@ public class Tehtavalista {
     }
     
     public void poista(int numero) {
+        // Poista 1
+        // main olettaa 0 olevan 1
+        numero--;
         this.lista.remove(numero);
     }
 }
