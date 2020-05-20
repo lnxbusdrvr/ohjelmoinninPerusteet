@@ -42,8 +42,8 @@ Kun sovellus tulostaa arvosanajakauman, tulee sovelluksen tulostaa myös pisteid
 
 Esimerkkitulostus:
 
-`Esimerkkitulostus
 
+```
 Syötä koepisteet: 82
 Syötä koepisteet: 83
 Syötä koepisteet: 96
