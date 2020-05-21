@@ -43,4 +43,13 @@ public class Arvosanarekisteri {
 
         return arvosana;
     }
+    
+    // Osa 1/3 Koodausaika 6min 55sek
+    public double arvosanojenKeskiarvo() {
+        int arvoSanatYht = 0;
+        for(int arvot : this.arvosanat) {
+            arvoSanatYht += arvot;
+        }
+        return (double)arvoSanatYht / this.arvosanat.size();
+    }
 }
