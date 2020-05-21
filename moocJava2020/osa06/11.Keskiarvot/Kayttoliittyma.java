@@ -46,6 +46,11 @@ public class Kayttoliittyma {
 
             arvosana = arvosana - 1;
         }
+        // Osa 3/3 Koodausaika
+        double pisteetKa = this.rekisteri.koepisteidenKeskiarvo();
+        double arvosanatKa = this.rekisteri.arvosanojenKeskiarvo();
+        System.out.print("Koepisteiden keskiarvo: "+pisteetKa);
+        System.out.print("Arvosanojen keskiarvo: "+arvosanatKa);
         
     }
 
