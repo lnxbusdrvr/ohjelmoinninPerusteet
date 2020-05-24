@@ -16,5 +16,15 @@ public class TehtavienhallintaTest {
         assertEquals(0, hallinta.tehtavalista().size());
     }
     
+    // Testissä määritellään luokalle Tehtavienhallinta metodi lisaa, 
+    // joka lisää tehtävälistalle uuden tehtävän. 
+    // Tehtävän lisäämisen onnistuminen tarkastetaan tehtavalista-metodin 
+    // koon kasvamisen kautta.
+    @Test
+    public void tehtavanLisaaminenKasvattaaListanKokoaYhdella() {
+        Tehtavienhallinta hallinta = new Tehtavienhallinta();
+        assertEquals(1, hallinta.tehtavalista().size());
+    }
+
 }
 
