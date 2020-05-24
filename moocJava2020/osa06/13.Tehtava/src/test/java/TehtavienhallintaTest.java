@@ -1,5 +1,4 @@
 
-
 // Haetaan nämä kirjastot testaamista varten
 import static org.junit.Assert.*;
 import org.junit.Test; // Huom ei static:

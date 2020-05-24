@@ -10,7 +10,7 @@ public class Tehtavienhallinta {
     }
     
     public ArrayList<String> tehtavalista() {
-        return this.tehtavat;
+        return this.tehtavat;        
     }
     
     public void lisaa(String tehtava) {
@@ -18,4 +18,3 @@ public class Tehtavienhallinta {
     }
 
 }
-
