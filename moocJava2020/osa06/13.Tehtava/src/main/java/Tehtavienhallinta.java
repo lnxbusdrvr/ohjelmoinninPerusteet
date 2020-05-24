@@ -3,30 +3,39 @@ import java.util.ArrayList;
 
 public class Tehtavienhallinta {
     
-    private ArrayList<String> tehtavat;
-    private ArrayList<String> tehdytTehtavat;
+    private ArrayList<Tehtava> tehtavat;
     
     public Tehtavienhallinta() {
         this.tehtavat = new ArrayList<>();
-        this.tehdytTehtavat = new ArrayList<>();
     }
     
     public ArrayList<String> tehtavalista() {
-        return this.tehtavat;        
+        ArrayList<String> palautettavat = new ArrayList<>();
+        for(Tehtava tehtava : this.tehtavat) {
+            palautettavat.add(tehtava.getNimi());
+        }
+        
+        return palautettavat;
     }
     
     public void lisaa(String tehtava) {
-        this.tehtavat.add(tehtava);
+        this.tehtavat.add(new Tehtava(tehtava));
     }
     
-    public void merkkaaTehdyksi(String tehtava) {
-        this.tehdytTehtavat.add(tehtava);
+    public void merkkaaTehdyksi(String tehdyksiMerkattavaTehtava) {
+        for(Tehtava tehtava : this.tehtavat) {
+            if(tehtava.getNimi().equals(tehdyksiMerkattavaTehtava)) {
+                tehtava.setTehty(true);
+            }
+        }
     }
     
-    public boolean onTehty(String tehtava) {
-        return this.tehdytTehtavat.contains(tehtava);
+    public boolean onTehty(String tarkistettavaTehtava) {
+        for(Tehtava tehtava : this.tehtavat) {
+            if(tehtava.getNimi().equals(tarkistettavaTehtava)) {
+                return tehtava.onTehty();
+            }
+        }
+        return false;
     }
-
-
 }
-
