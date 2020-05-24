@@ -1,6 +1,7 @@
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import org.junit.Test; // Huom ei static:
 
 public class TehtavienhallintaTest {
@@ -27,6 +28,7 @@ public class TehtavienhallintaTest {
     
     @Test
     public void tehtavanVoiMerkataTehdyksi() {
+        Tehtavienhallinta hallinta = new Tehtavienhallinta();
         hallinta.lisaa("Uusi tehtävä");
         hallinta.merkkaaTehdyksi("Uusi tehtävä");
         assertTrue(hallinta.onTehty("Uusi tehtävä"));
@@ -34,10 +36,10 @@ public class TehtavienhallintaTest {
     
     @Test
     public void tehdyksiMerkkaamatonEiOleTehty() {
+        Tehtavienhallinta hallinta = new Tehtavienhallinta();
         hallinta.lisaa("Uusi tehtava");
         hallinta.merkkaaTehdyksi("Uusi tehtävä");
         assertFalse(hallinta.onTehty("Joku tehtävä"));
     }
-    
 }
 
