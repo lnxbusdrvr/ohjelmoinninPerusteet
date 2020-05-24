@@ -7,5 +7,9 @@ public class Tehtavienhallinta {
         return new ArrayList<>();
         
     }
+    
+    public void lisaa(String tehtava) {
+        
+    }
 
 }
