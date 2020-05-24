@@ -4,9 +4,11 @@ import java.util.ArrayList;
 public class Tehtavienhallinta {
     
     private ArrayList<String> tehtavat;
+    private ArrayList<String> tehdytTehtavat;
     
     public Tehtavienhallinta() {
         this.tehtavat = new ArrayList<>();
+        this.tehdytTehtavat = new ArrayList<>();
     }
     
     public ArrayList<String> tehtavalista() {
@@ -17,12 +19,12 @@ public class Tehtavienhallinta {
         this.tehtavat.add(tehtava);
     }
     
-    public void merkkaaTehdyksi() {
-        
+    public void merkkaaTehdyksi(String tehtava) {
+        this.tehdytTehtavat.add(tehtava);
     }
     
     public boolean onTehty(String tehtava) {
-        return true;
+        return this.tehdytTehtavat.contains(tehtava);
     }
 
 

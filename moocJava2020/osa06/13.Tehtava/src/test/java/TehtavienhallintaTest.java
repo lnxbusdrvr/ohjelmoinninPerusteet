@@ -1,4 +1,5 @@
-mport static org.junit.Assert.assertEquals;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test; // Huom ei static:
 
@@ -29,6 +30,13 @@ public class TehtavienhallintaTest {
         hallinta.lisaa("Uusi tehtävä");
         hallinta.merkkaaTehdyksi("Uusi tehtävä");
         assertTrue(hallinta.onTehty("Uusi tehtävä"));
+    }
+    
+    @Test
+    public void tehdyksiMerkkaamatonEiOleTehty() {
+        hallinta.lisaa("Uusi tehtava");
+        hallinta.merkkaaTehdyksi("Uusi tehtävä");
+        assertFalse(hallinta.onTehty("Joku tehtävä"));
     }
     
 }
