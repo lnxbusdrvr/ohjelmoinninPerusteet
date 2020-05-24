@@ -16,5 +16,15 @@ public class Tehtavienhallinta {
     public void lisaa(String tehtava) {
         this.tehtavat.add(tehtava);
     }
+    
+    public void merkkaaTehdyksi() {
+        
+    }
+    
+    public boolean onTehty(String tehtava) {
+        return true;
+    }
+
 
 }
+
