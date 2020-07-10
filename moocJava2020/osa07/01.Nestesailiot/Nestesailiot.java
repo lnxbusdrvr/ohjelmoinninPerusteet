@@ -55,7 +55,15 @@ public class Nestesailiot {
                     }
                 }
             }
-
+            
+            if(komento.equals("poista")) {
+                if(maara > 0) {
+                    toka -= maara;
+                    if(toka < 0) {
+                        toka = 0;
+                    }
+                }
+            }
         }
     }
 }
