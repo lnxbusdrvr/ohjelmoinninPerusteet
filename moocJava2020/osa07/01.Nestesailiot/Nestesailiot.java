@@ -36,8 +36,26 @@ public class Nestesailiot {
                     }
                 }
             }
+            
+            if(komento.equals("siirra")) {
+                // Ei negatiivisia lukuja, eikä tyhjää säiliötä
+                if(maara > 0 && eka != 0) {
+                    eka -= maara;
+                    toka += maara;
+                    if(eka < 0) {
+                        // Yhdistetään negaluku + toka:n arvo,
+                        // jolloin toka:sta tulee oikea erotus.
+                        int apu = eka + toka;
+                        toka = apu;
+                        eka = 0;
+                    }
+                    //Ei yli 100
+                    if(toka > 100) {
+                        toka = 100;
+                    }
+                }
+            }
 
         }
     }
-
 }
