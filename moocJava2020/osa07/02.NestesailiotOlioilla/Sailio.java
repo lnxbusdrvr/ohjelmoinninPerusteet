@@ -27,11 +27,14 @@ public class Sailio {
             }
         }
     }
-    
+         
     public void poista(int maara) {
-        if(maara > 0) {
-            sisalto -= maara;
+        if(maara > 0 && maara <= 100) {
+            this.sisalto -= maara;
             if(this.sisalto < 0) {
+                this.sisalto = 0;
+            }
+            if(maara < 0) {
                 this.sisalto = 0;
             }
         }
