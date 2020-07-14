@@ -18,4 +18,16 @@ public class Paaohjelma {
         return pienin;        
     }
     
+    public static int pienimmanIndeksi(int[] taulukko) {
+        int pieninIdx = 0;
+        for(int i = 0; i < taulukko.length; i++) {
+            int indexinLuku = taulukko[i];
+                
+            if(indexinLuku == pienin(taulukko)) {
+                pieninIdx=i;
+            }
+        }
+        return pieninIdx;    
+    }
+    
 }
