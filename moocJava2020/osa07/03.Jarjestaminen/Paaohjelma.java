@@ -47,4 +47,10 @@ public class Paaohjelma {
         return idx;
     }
     
+    public static void vaihda(int[] taulukko, int indeksi1, int indeksi2) {
+        int apulainen = taulukko[indeksi1];
+        taulukko[indeksi1] = taulukko[indeksi2];
+        taulukko[indeksi2] = apulainen;
+    }
+    
 }
