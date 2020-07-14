@@ -53,4 +53,11 @@ public class Paaohjelma {
         taulukko[indeksi2] = apulainen;
     }
     
+    public static void jarjesta(int[] taulukko) {
+        for(int i=0; i < taulukko.length; i++) {
+            int pienin = pienimmanIndeksiAlkaen(taulukko, i);
+            vaihda(taulukko, pienin, i);
+        }
+    }
+    
 }
