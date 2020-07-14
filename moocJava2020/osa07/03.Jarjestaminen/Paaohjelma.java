@@ -4,6 +4,10 @@ public class Paaohjelma {
     public static void main(String[] args) {
         // tee testikoodia tänne
         int[] taulukko = {3, 1, 5, 99, 3, 12};
+        
+        System.out.println("Pienin: " + Paaohjelma.pienin(taulukko));
+        System.out.println("Pienimmän indeksi: " + Paaohjelma.pienimmanIndeksi(taulukko));
+        System.out.println(Paaohjelma.pienimmanIndeksiAlkaen(taulukko, 0));
     }
     
     public static int pienin(int[] taulukko) {
@@ -27,7 +31,20 @@ public class Paaohjelma {
                 pieninIdx=i;
             }
         }
-        return pieninIdx;    
+        return pieninIdx;   
+    }
+    
+    public static int pienimmanIndeksiAlkaen(int[] taulukko, int aloitusIndeksi) {
+        int idx = aloitusIndeksi;
+        int pienin = taulukko[aloitusIndeksi];
+                
+        for(int i = aloitusIndeksi; i < taulukko.length; i++) {                
+            if(taulukko[i] < pienin) {
+                pienin=taulukko[i];
+                idx=i;
+            }
+        }
+        return idx;
     }
     
 }
