@@ -44,6 +44,11 @@ public class Paaohjelma {
     }
 
     public static int perakkaishaku(ArrayList<Kirja> kirjat, int haettavaId) {
+        for(int i = 0; i < kirjat.size(); i++) {
+            if(kirjat.get(i).getId() == haettavaId) {
+                return i;
+            }
+        }
         return -1;
     }
 
@@ -51,5 +56,3 @@ public class Paaohjelma {
         return -1;
     }
 }
-
-
