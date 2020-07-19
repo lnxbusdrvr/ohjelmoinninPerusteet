@@ -62,3 +62,4 @@ palauta arvo -1
 Huomaa, että kirjojen tapauksessa tarkastelet kirjojen ```id```-muuttujien arvoja. 
 Tämä tarkoittaa sitä, että sen sijaan, että käsittelet vain listan tietyssä indeksissä olevaa arvoa, 
 tulee tehtävässä käsitellä tietyssä indeksissä olevan arvon id-muuttujaa.
+
