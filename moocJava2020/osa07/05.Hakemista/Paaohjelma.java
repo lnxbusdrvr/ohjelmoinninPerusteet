@@ -53,6 +53,24 @@ public class Paaohjelma {
     }
 
     public static int binaarihaku(ArrayList<Kirja> kirjat, long haettavaId) {
+        int alku = 0;
+        int loppu = kirjat.size() - 1;
+        
+        while(alku <= loppu) {            
+            int keski = (loppu + alku) / 2;
+            
+            if(kirjat.get(keski).getId() == haettavaId) {
+                return keski;
+            }else if(kirjat.get(keski).getId() < haettavaId) {
+                /// Asetetaan uusi alkunro
+                alku = keski + 1;
+            }else{
+                // Asetetaan uusi loppunro
+                loppu = keski - 1;
+            }
+        }
         return -1;
     }
+    
 }
+
