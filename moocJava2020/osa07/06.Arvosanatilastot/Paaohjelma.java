@@ -34,7 +34,18 @@ public class Paaohjelma {
         }
         double keskiarvo = (double)summa/lukumaara;
         double hyvaksy_keskiarvo = (double)hyvaksytyt_summa/hyvaksytyt_lkm;
+        double hyvks_pros = 100.0*hyvaksytyt_lkm/lukumaara;
+        
         System.out.println("Pisteiden keskiarvo (kaikki): "+keskiarvo);
-        System.out.println("Pisteiden keskiarvo (hyväksytyt): "+hyvaksy_keskiarvo);
+        if(Double.isNaN(hyvaksy_keskiarvo)) {
+            System.out.println("Pisteiden keskiarvo (hyväksytyt): -");
+        }else{
+            System.out.println("Pisteiden keskiarvo (hyväksytyt): "+hyvaksy_keskiarvo);
+        }
+        if(Double.isNaN(hyvks_pros)) {
+            System.out.println("Hyväksymisprosentti: 0.0");
+        }else{
+            System.out.println("Hyväksymisprosentti: "+hyvks_pros);
+        }
     }
 }
