@@ -10,6 +10,8 @@ public class Paaohjelma {
         // useampaan luokkaan.
         int lukumaara = 0;
         int summa = 0;
+        int hyvaksytyt_summa = 0;
+        int hyvaksytyt_lkm = 0;
         
         
         System.out.println("Syötä yhteispisteet, -1 lopettaa:");
@@ -23,12 +25,16 @@ public class Paaohjelma {
             if(luku > 0 && luku <=100) {
                 summa = summa + luku;
                 lukumaara++;
-            }/*else{
-                lukumaara--;
-            }*/
+                if(luku >= 50) {
+                    hyvaksytyt_summa = hyvaksytyt_summa + luku;
+                    hyvaksytyt_lkm++;
+                }
+            }
             
         }
         double keskiarvo = (double)summa/lukumaara;
+        double hyvaksy_keskiarvo = (double)hyvaksytyt_summa/hyvaksytyt_lkm;
         System.out.println("Pisteiden keskiarvo (kaikki): "+keskiarvo);
+        System.out.println("Pisteiden keskiarvo (hyväksytyt): "+hyvaksy_keskiarvo);
     }
 }
