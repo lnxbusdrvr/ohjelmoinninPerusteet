@@ -35,6 +35,7 @@ public class Arvosanat {
         this.keskiarvo();
         this.hyvaksyttyKeskiarvo();
         this.hyvaksyttyKeskiarvoProsentti();
+        this.arvosanajakauma();
     }
     
     public void keskiarvo() {
@@ -75,6 +76,96 @@ public class Arvosanat {
         System.out.println("Hyväksymisprosentti: "+hyvks_pros);
     }
     
+    public int nollanPisteet() {
+        int nolla = 0;
+        
+        for(int arvosana : this.pisteet) {
+            if(arvosana >0 && arvosana < 50) {
+                nolla++;
+            }
+        }
+        return nolla;
+    }
     
+    public int yhdenPisteet() {
+        int yksi = 0;
+        
+        for(int arvosana : this.pisteet) {
+            if(arvosana >= 50 && arvosana < 60) {
+                yksi++;
+            }
+        }
+        return yksi;
+    }
+    
+    public int kahdenPisteet() {
+        int kaksi = 0;
+        
+        for(int arvosana : this.pisteet) {
+            if(arvosana >= 60 && arvosana < 70) {
+                kaksi++;
+            }
+        }
+        return kaksi;
+    }
+    
+    public int kolmenPisteet() {
+        int kolme = 0;
+        
+        for(int arvosana : this.pisteet) {
+            if(arvosana >= 70 && arvosana < 80) {
+                kolme++;
+            }
+        }
+        return kolme;
+    }
+    
+    public int neljanPisteet() {
+        int nelja = 0;
+        
+        for(int arvosana : this.pisteet) {
+            if(arvosana >= 80 && arvosana < 90) {
+                nelja++;
+            }
+        }
+        return nelja;
+    }
+    
+    public int viidenPisteet() {
+        int viisi = 0;
+        
+        for(int arvosana : this.pisteet) {
+            if(arvosana >= 90 && arvosana < 100) {
+                viisi++;
+            }
+        }
+        return viisi;
+    }
+    
+    public void arvosanajakauma() {
+        System.out.println("Arvosanajakauma:");
+        System.out.print("5: "); 
+        tahtia(viidenPisteet());
+        System.out.print("\n4: "); 
+        tahtia(neljanPisteet());
+        System.out.print("\n3: "); 
+        tahtia(kolmenPisteet());
+        System.out.print("\n2: "); 
+        tahtia(kahdenPisteet());
+        System.out.print("\n1: "); 
+        tahtia(yhdenPisteet());
+        System.out.print("\n0: "); 
+        tahtia(nollanPisteet());
+    }
+    
+    /**
+     *
+     * @param tahtia
+     */
+    public static void tahtia(int tahtia) {
+        for(int i=0; i<tahtia;i++) {
+            System.out.print("*");
+        }
+    }
     
 }
