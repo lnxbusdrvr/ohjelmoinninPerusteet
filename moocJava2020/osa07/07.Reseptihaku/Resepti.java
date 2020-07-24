@@ -24,6 +24,18 @@ public class Resepti {
     public int getAika() {
         return Integer.parseInt(this.resepti.get(1));
     }
+    
+    public boolean getAinekset(String haettava) {
+        // Käy läpi reseptin kaikki rivit
+        for(String ainekset : this.resepti) {
+            // Jos hakusana ei löydy
+            if(ainekset.equals(haettava)) {
+                // palauta epätosi
+                return true;
+            }
+        }
+        return false;
+    }
         
     @Override
     public String toString(){

@@ -56,12 +56,14 @@ public class Kayttoliittyma {
     public void menu() {
         try
         {
-          
+            System.out.println();
+            
             System.out.println("Komennot:");
             System.out.println("listaa - listaa reseptit");
             System.out.println("lopeta - lopettaa ohjelman");
             System.out.println("hae nimi - hakee reseptiä nimen perusteella");
             System.out.println("hae keittoaika - hakee reseptiä keittoajan perusteella");
+            System.out.println("hae aine - hakee reseptiä raaka-aineen perusteella");
             
             System.out.println();
             
@@ -80,6 +82,9 @@ public class Kayttoliittyma {
                 }
                 if(komento.equals("hae keittoaika")) {
                     haeKeittoaika();
+                }
+                if(komento.equals("hae aine")) {
+                    haeKeittoainekset();
                 }
             }
         }catch(Exception e) {
@@ -111,6 +116,27 @@ public class Kayttoliittyma {
                 System.out.println(haettava);
             }
         }
+        System.out.println();
+    }
+    
+    public void haeKeittoainekset() {
+        System.out.print("Mitä raaka-ainetta haetaan: ");
+        String aine = this.lukija.nextLine();
+        
+        System.out.println();
+        
+        System.out.println("Reseptit:");
+        
+        for(int i = 0; i < this.resepti.size(); i++) {
+            if(this.resepti.get(i).getAinekset(aine) == true) {
+                System.out.println(this.resepti.get(i).toString());
+            }
+        }/*
+        for(Resepti rese : this.resepti) {
+            if(rese.getAinekset(aine) == true) {
+                System.out.println(rese);
+            }
+        }*/
         System.out.println();
     }
         
