@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  *
@@ -14,16 +13,16 @@ public class Resepti {
         this.resepti = new ArrayList<>();
     }
     
-    public void lisaa(String resepti) {
-        this.resepti.add(resepti);
+    public void lisaa(String lisattava) {
+        this.resepti.add(lisattava);
     }
       
     public String getNimi() {
         return this.resepti.get(0);
     }
     
-    public String getAika() {
-        return this.resepti.get(1);
+    public int getAika() {
+        return Integer.parseInt(this.resepti.get(1));
     }
         
     @Override

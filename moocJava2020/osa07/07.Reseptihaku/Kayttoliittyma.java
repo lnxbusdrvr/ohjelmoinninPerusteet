@@ -38,7 +38,7 @@ public class Kayttoliittyma {
                 String rivi = tiedostonlukija.nextLine();
                 
                 // Jos rivi on tyhjä, lisää löydetty resepti
-                // aloita uusiresepti
+                // ja aloita uusiresepti
                 if(rivi.isEmpty()) {
                     this.resepti.add(reseptit);
                     reseptit = new Resepti();
@@ -61,6 +61,7 @@ public class Kayttoliittyma {
             System.out.println("listaa - listaa reseptit");
             System.out.println("lopeta - lopettaa ohjelman");
             System.out.println("hae nimi - hakee reseptiä nimen perusteella");
+            System.out.println("hae keittoaika - hakee reseptiä keittoajan perusteella");
             
             System.out.println();
             
@@ -76,6 +77,9 @@ public class Kayttoliittyma {
                 }
                 if(komento.equals("hae nimi")) {
                     haeNimi();
+                }
+                if(komento.equals("hae keittoaika")) {
+                    haeKeittoaika();
                 }
             }
         }catch(Exception e) {
@@ -95,6 +99,20 @@ public class Kayttoliittyma {
             }
         }
     }
+    
+    public void haeKeittoaika() {
+        System.out.print("Keittoaika korkeintaan: ");
+        int aika = Integer.parseInt(this.lukija.nextLine());
+        
+        System.out.println();
+        
+        for(Resepti haettava : this.resepti) {
+            if(haettava.getAika() <= aika) {
+                System.out.println(haettava);
+            }
+        }
+        System.out.println();
+    }
         
     public void listaa() {
         System.out.println();
@@ -105,4 +123,5 @@ public class Kayttoliittyma {
         }
         System.out.println();
     }
+    
 }
