@@ -59,7 +59,10 @@ public class Kayttoliittyma {
           
             System.out.println("Komennot:");
             System.out.println("listaa - listaa reseptit");
-            System.out.println("lopeta - lopettaa ohjelman\n");
+            System.out.println("lopeta - lopettaa ohjelman");
+            System.out.println("hae nimi - hakee reseptiä nimen perusteella");
+            
+            System.out.println();
             
             while(true) {
                 System.out.print("Syötä komento: ");
@@ -71,10 +74,26 @@ public class Kayttoliittyma {
                 if(komento.equals("listaa")) {                    
                     listaa();
                 }
+                if(komento.equals("hae nimi")) {
+                    haeNimi();
+                }
             }
         }catch(Exception e) {
             System.out.println(e.getMessage());
         }        
+    }
+    
+    public void haeNimi() {
+        System.out.print("Mitä haetaan: ");
+        String nimi = this.lukija.nextLine();
+        
+        System.out.println();
+        
+        for(Resepti haettava : this.resepti) {
+            if(haettava.getNimi().contains(nimi)) {
+                System.out.println(haettava);
+            }
+        }
     }
         
     public void listaa() {
