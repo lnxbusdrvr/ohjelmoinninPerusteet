@@ -1,0 +1,22 @@
+Tehtävän koodausaika yhteensä
+2h 22min 45sek
+Tehtävän ajatustyötä yhteensä noin
+5h 30min 29sek
+
+Ajastan työni muuten, kun olen lukenut, 
+tai kuullut opettajalta jollain kurssilla,
+että Junior-tasoiseksi ohjelmoijaksi tullaan,
+kun ollaan koodattu 400h.
+
+Ajat ovat noinaikoja, 
+sillä en ole kellottanut kaikkia koodejani.
+Olen laskenut, että yhden merkin kirjoittamiseen
+menee noin sekunti aikaa.
+
+Joten olen vanhat koodini (2017 jne.) laskenut merkkien määrillä.
+
+Lisäksi 400h tarkoittaa varmaankin myös ajattelua.
+Jolloin olenkin sitten tähään tehtävään mennessä
+koodannut noin yli 1294tuntia.
+Merkkien kirjoittamiseen noin yli 98tuntia.
+
