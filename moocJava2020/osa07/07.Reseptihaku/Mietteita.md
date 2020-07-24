@@ -20,7 +20,7 @@ koska siitä ei oppisi mitään.
 Näen valmiit ratkaisut enemmänkin Menttorina/Ohjaajana miten asiat voisi tehdä. 
 Koodista teen kuitenkin omanlaisen. Sellaisen joka tukee oppimistani.
 
-## Vertauskuva entiseltä alalta
+## Vertauskuva entisestä ammatista
 
 Linja-autokuskinakin ollessani opiskellessani uuttaa reittiä, 
 perehdyin reittiin jonkun muun kuljettajan ohjaamina. 
@@ -33,21 +33,21 @@ jotka tulivat kyytini reittiä opiskelemaan.
 
 Jokainen ajaa kuitenkin omalla tavalla, jonka itse näkee järkeväksi. 
 Ottaen tietenkin matkustajat kyytiin ja jättämällä pois kyydistä (vrt. esim silmukkaan ja if-lauseisiin)
-ja välillä tulee ns. bugi jolloin ajaa esimerkiksi väärillä kilvillä väärää linjaa, 
+ja välillä tulee ns. bugi jolloin ajaa esimerkiksi väärillä kilvillä väärällä linjalla, 
 tai esimerkiksi ajaa vahingossa pysäkin ohi tmv. 
 Mutta virheistä oppii parhaiten, koska ne jää mieleen parhaiten.
 
 
-## Linjalta takaisin koodiin
+## Linjalta takaisin ohjelmointiin
 
 Toinen tehtävä sujui aika nopeasti.
 
 Kolmannessa tehtävässä yritin rakentaa `Reseptit.java` uudelleen HashMapia käyttäen, siihen kului runsaasti aikaa ja kellotukseni meni pieleen. 
-Painoin vahingossa resettiä, tai kello jäi päälle tauon ajaksi tms.
+Painoin vahingossa resettiä, tai kello jäi päälle vahingossa tms.
 
 Kolmannessa tehtävässa, kun mietin HashMapia ajattelin kuitenkin 
 kun ArrayList toimii edellisessä tehtävässä hyvin, 
-ehkä saisin kuitenkin numerovertailunkin toimimaan, 
+ehkä saisin kuitenkin numerovertailunkin toimimaan (String-tyyppi), 
 ratkaisuhan oli hyvin yksinkertainen tapa:
 
 `public int getAika` metodin sai muuttumaan `int`iksi, kun muunsi ArrayListasta saadun `String`in `int`iksi jolloin palautui kokonaisluku.
@@ -66,3 +66,4 @@ Itse harjoitustyöstä 5/5.
 
 ## Linkit
 1. [Tietokantojen perusteet - kesä 2020](https://github.com/lnxbusdrvr/tikape-kesa2020)
+1. [Käyttämäni kellotusivu](https://minuut.io/)
