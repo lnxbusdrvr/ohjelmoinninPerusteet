@@ -19,6 +19,12 @@ public class Lempinimet {
 
     public static void main(String[] args) {
         // Tee tehtävänannossa pyydetyt operaatiot täällä!
+        HashMap<String, String> lempinimi = new HashMap<>();
+        
+        lempinimi.put("matti", "mage");
+        lempinimi.put("mikael", "mixu");
+        lempinimi.put("arto", "arppa");
+        System.out.println(lempinimi.get("matti"));
     }
 
 }
