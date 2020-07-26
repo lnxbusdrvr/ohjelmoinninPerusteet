@@ -11,6 +11,7 @@
  * ohjelman tulee 
  * tulostaa "keskiarvon laskeminen ei ole mahdollista".
  *
+ *
  * Esimerkkitulostus:
  *
  *  3 
