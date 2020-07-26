@@ -1,5 +1,6 @@
 /*
  *
+ *
  * Kirjoita ohjelma, 
  * joka lukee merkkijonoja käyttäjältä kunnes käyttäjä syöttää merkkijonon "loppu". 
  * Mikäli syöte ei ole "loppu", 
