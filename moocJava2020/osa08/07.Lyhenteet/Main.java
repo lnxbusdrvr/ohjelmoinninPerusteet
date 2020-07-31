@@ -1,5 +1,6 @@
 /*
  *
+ *
  * Luo lyhenteiden ylläpitoon käytettävä luokka Lyhenteet. 
  * Luokalla tulee olla parametriton konstruktori, 
  * ja sen tulee tarjota seuraavat metodit:
