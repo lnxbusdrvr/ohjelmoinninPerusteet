@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         // alla sama esimerkkiohjelma mikä 9.1:n tehtävämääritelmästä löytyy
-        
+        /*
         Rekisterinumero rek1 = new Rekisterinumero("FI", "ABC-123");
         Rekisterinumero rek2 = new Rekisterinumero("FI", "UXE-465");
         Rekisterinumero rek3 = new Rekisterinumero("D", "B WQ-431");
@@ -31,5 +31,16 @@ public class Main {
         System.out.println(omistajat.get(new Rekisterinumero("FI", "ABC-123")));
         System.out.println(omistajat.get(new Rekisterinumero("D", "B WQ-431")));
         // jos hashCode ei ole ylikirjoitettu, eivät omistajat löydy
+*/
+        // Osa 2 lisaa
+        Ajoneuvorekisteri ar = new Ajoneuvorekisteri(); 
+        ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
+        ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
+        
+        // Osa 2 hae
+        ar.hae(new Rekisterinumero("FI", "AAA-111"));
+        
+        // Osa 2 poista
+        ar.poista( new Rekisterinumero("FI", "AAA-111"));
     }
 }
