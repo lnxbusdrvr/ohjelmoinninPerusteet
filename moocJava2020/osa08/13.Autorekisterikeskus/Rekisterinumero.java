@@ -1,35 +1,53 @@
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Objects;
 
+public class Rekisterinumero {
+    // älä muuta luokan jo valmiina olevia osia
 
-public class Main {
+    // oliomuuttujille on lisätty määre final, jolloin niiden arvoa ei asetuksen
+    // jälkeen voi enää muuttaa
+    private final String rekNro;
+    private final String maa;
 
-    public static void main(String[] args) {
-        // alla sama esimerkkiohjelma mikä 9.1:n tehtävämääritelmästä löytyy
-        
-        Rekisterinumero rek1 = new Rekisterinumero("FI", "ABC-123");
-        Rekisterinumero rek2 = new Rekisterinumero("FI", "UXE-465");
-        Rekisterinumero rek3 = new Rekisterinumero("D", "B WQ-431");
-
-        ArrayList<Rekisterinumero> suomalaiset = new ArrayList<>();
-        suomalaiset.add(rek1);
-        suomalaiset.add(rek2);
-
-        Rekisterinumero uusi = new Rekisterinumero("FI", "ABC-123");
-        if (!suomalaiset.contains(uusi)) {
-            suomalaiset.add(uusi);
-        }
-        System.out.println("suomalaiset: " + suomalaiset);
-        // jos equals-metodia ei ole ylikirjoitettu, menee sama rekisterinumero toistamiseen listalle
-
-        HashMap<Rekisterinumero, String> omistajat = new HashMap<>();
-        omistajat.put(rek1, "Arto");
-        omistajat.put(rek3, "Jürgen");
-
-        System.out.println("omistajat:");
-        System.out.println(omistajat.get(new Rekisterinumero("FI", "ABC-123")));
-        System.out.println(omistajat.get(new Rekisterinumero("D", "B WQ-431")));
-        // jos hashCode ei ole ylikirjoitettu, eivät omistajat löydy
+    public Rekisterinumero(String maa, String rekNro) {
+        this.rekNro = rekNro;
+        this.maa = maa;
     }
+
+    @Override
+    public String toString() {
+        return maa + " " + rekNro;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 79 * hash + Objects.hashCode(this.rekNro);
+        hash = 79 * hash + Objects.hashCode(this.maa);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Rekisterinumero other = (Rekisterinumero) obj;
+        if (!Objects.equals(this.rekNro, other.rekNro)) {
+            return false;
+        }
+        if (!Objects.equals(this.maa, other.maa)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+
 }
