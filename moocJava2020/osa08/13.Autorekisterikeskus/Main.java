@@ -34,13 +34,25 @@ public class Main {
 */
         // Osa 2 lisaa
         Ajoneuvorekisteri ar = new Ajoneuvorekisteri(); 
-        ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
-        ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
+        //ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
+        //ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
         
         // Osa 2 hae
-        ar.hae(new Rekisterinumero("FI", "AAA-111"));
+        //ar.hae(new Rekisterinumero("FI", "AAA-111"));
         
         // Osa 2 poista
-        ar.poista( new Rekisterinumero("FI", "AAA-111"));
+        //ar.poista( new Rekisterinumero("FI", "AAA-111"));
+        
+        // Osa 3 tulostaRekisterinumerot
+        //ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
+        //ar.lisaa( new Rekisterinumero("FI", "BBB-222"), "Pekka");
+        //ar.lisaa( new Rekisterinumero("FI", "CCC-333"), "Jukka");
+        //ar.tulostaRekisterinumerot();
+        
+        // Osa 3 tulostaOmistajat()
+        ar.lisaa( new Rekisterinumero("FI", "AAA-111"), "Arto");
+        ar.lisaa( new Rekisterinumero("FI", "BBB-222"), "Pekka");
+        ar.lisaa( new Rekisterinumero("FI", "CCC-333"), "Arto");
+        ar.tulostaOmistajat();
     }
 }

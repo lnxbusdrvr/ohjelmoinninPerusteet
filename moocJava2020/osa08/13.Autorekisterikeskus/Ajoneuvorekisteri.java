@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -50,4 +51,31 @@ public class Ajoneuvorekisteri {
         }
         return false;
     }
+    
+    public void tulostaRekisterinumerot() {
+        // tulostaa rekisterissä olevat rekisterinumerot.
+        for(Rekisterinumero rekNro : this.omistajat.keySet()) {
+            System.out.println(rekNro);
+        }
+        
+    }
+    
+    public void tulostaOmistajat() {
+        // tulostaa rekisterissä olevien autojen omistajat. 
+        // Kukin nimi tulee tulostaa vain kertaalleen vaikka 
+        // omistajalla olisikin useampi auto.
+        ArrayList<String> tulostaOmistaja = new ArrayList<>();
+        
+        //Lisätään listaan omistajat
+        for(String omistaja : this.omistajat.values()) {
+            if(!tulostaOmistaja.contains(omistaja)) {
+                tulostaOmistaja.add(omistaja);
+            }
+        }
+        // Tulostetaan omistajat
+        for(String omistajalista : tulostaOmistaja) {
+            System.out.println(omistajalista);
+        }
+    }
+    
 }
