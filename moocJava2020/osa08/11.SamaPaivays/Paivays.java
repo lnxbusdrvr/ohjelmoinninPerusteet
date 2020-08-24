@@ -51,4 +51,40 @@ public class Paivays {
         return this.vuosi - verrattava.vuosi - vuosiPois;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + this.paiva;
+        hash = 37 * hash + this.kuukausi;
+        hash = 37 * hash + this.vuosi;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Paivays other = (Paivays) obj;
+        if (this.paiva != other.paiva) {
+            return false;
+        }
+        if (this.kuukausi != other.kuukausi) {
+            return false;
+        }
+        if (this.vuosi != other.vuosi) {
+            return false;
+        }
+        return true;
+    }
+
+    
+    
+
 }
