@@ -26,3 +26,25 @@ A
 B
 C
 ```
+
+## Osa 2
+
+Muokkaa luokkia siten, että luokka B perii luokan A ja luokka C perii luokan B. Luokasta A tulee siis luokan B yliluokka, ja luokasta B luokan C yliluokka.
+
+
+```
+C c = new C();
+
+c.a();
+c.b();
+c.c();
+```
+
+Esimerkkitulostus:
+
+```
+A
+B
+C
+```
+
