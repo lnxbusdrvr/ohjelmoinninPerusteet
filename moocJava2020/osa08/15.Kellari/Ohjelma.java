@@ -4,7 +4,7 @@ public class Ohjelma {
     public static void main(String[] args) {
         // Testaa ohjelmaasi täällä
         // Osa 1
-        Kellari kellari = new Kellari();
+       /* Kellari kellari = new Kellari();
         kellari.lisaa("a14", "luistimet");
         kellari.lisaa("a14", "maila");
         kellari.lisaa("a14", "luistimet");
@@ -16,9 +16,8 @@ public class Ohjelma {
         kellari.lisaa("g63", "pi");
 
         System.out.println(kellari.sisalto("a14"));
-        System.out.println(kellari.sisalto("f156"));
+        System.out.println(kellari.sisalto("f156"));*/
         // Osa 2
-        /*
         Kellari kellari = new Kellari();
         kellari.lisaa("a14", "luistimet");
         kellari.lisaa("a14", "maila");
@@ -37,7 +36,6 @@ public class Ohjelma {
         kellari.poista("f156", "rullaluistimet");
 
         System.out.println(kellari.komerot());
-        */
 
     }
 }

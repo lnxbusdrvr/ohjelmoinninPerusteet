@@ -30,6 +30,29 @@ public class Kellari {
         return this.kellari.getOrDefault(komero, new ArrayList<>());
     }
 
+    
+    public void poista(String komero, String tavara) {
+        // poistaa parametrina annetusta komerosta parametrina 
+        // annetun tavaran. Huom! Poistaa vain yhden kappaleen 
+        // mikäli samannimisiä tavaroita on useita, loput jäävät 
+        // vielä jäljelle. Mikäli komero jäisi poiston jälkeen tyhjäksi, 
+        // metodi poistaa myös komeron.
+        if(this.kellari.get(komero).contains(tavara)) {
+            this.kellari.get(komero).remove(tavara);
+        }
+    }
+    public ArrayList<String> komerot() {
+        // palauttaa listana kellarikomeroiden nimet. 
+        // Huom! Listassa vain ne komerot, joissa on tavaraa.
+        ArrayList<String> tulostukset = new ArrayList<>();
+        
+        for(String komero : this.kellari.keySet()) {
+            if(!this.kellari.get(komero).isEmpty()) {
+                tulostukset.add(komero);
+            }
+        }
+        return tulostukset;
+    }
 
     
 }
