@@ -1,4 +1,7 @@
 
+import java.util.ArrayList;
+
+
 
 public class Main {
 
@@ -27,6 +30,7 @@ public class Main {
         System.out.println(olli);*/
         
         // Osa 4
+        /*
         Opettaja ada = new Opettaja("Ada Lovelace", "Korsontie 1 03100 Vantaa", 1200);
         Opettaja esko = new Opettaja("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
         System.out.println(ada);
@@ -39,8 +43,20 @@ public class Main {
             olli.opiskele();
             i = i + 1;
         }
-        System.out.println(olli);
+        System.out.println(olli);*/
+        
+        ArrayList<Henkilo> henkilot = new ArrayList<Henkilo>();
+        henkilot.add(new Opettaja("Ada Lovelace", "Korsontie 1 03100 Vantaa", 1200));
+        henkilot.add(new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki"));
 
+        tulostaHenkilot(henkilot);
+
+    }
+
+    public static void tulostaHenkilot(ArrayList<Henkilo> henkilot) {
+        for(Henkilo henki : henkilot) {
+            System.out.println(henki);
+        }
     }
 
 }
