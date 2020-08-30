@@ -10,8 +10,7 @@ public class Main {
         Henkilo esko = new Henkilo("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
         System.out.println(ada);
         System.out.println(esko);
-        
-        
+                
         // Osa 2
         Opiskelija olli = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki");
         System.out.println(olli);
@@ -19,6 +18,12 @@ public class Main {
         olli.opiskele();
         System.out.println("opintopisteitä "+ olli.opintopisteita());
         
+        // Osa 3
+        //Opiskelija olli = new Opiskelija("Olli", "Ida Albergintie 1 00400 Helsinki");
+        System.out.println(olli);
+        olli.opiskele();
+        System.out.println(olli);
+
     }
 
 }

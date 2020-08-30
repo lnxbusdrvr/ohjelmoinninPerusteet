@@ -14,6 +14,7 @@ public class Henkilo {
         this.osoite = osoite;
     }
     
+    @Override
     public String toString() {
         return this.nimi+"\n  "+this.osoite;
     }
