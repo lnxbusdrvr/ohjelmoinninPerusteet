@@ -26,6 +26,7 @@ public class Tuotevarasto extends Varasto {
         this.tuotenimi = uusiNimi;
     }
     
+    @Override
     public String toString() {
         // palauttaa olion tilan merkkijonoesityksenä 
         // tyyl2iin Juice: saldo = 64.5, tilaa 123.5
