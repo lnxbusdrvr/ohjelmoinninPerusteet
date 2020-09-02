@@ -21,4 +21,15 @@ public class Tuotevarasto extends Varasto {
         return this.tuotenimi;
     }
     
+    public void setNimi(String uusiNimi) {
+        // asettaa tuotteelle uuden nimen.
+        this.tuotenimi = uusiNimi;
+    }
+    
+    public String toString() {
+        // palauttaa olion tilan merkkijonoesityksenä 
+        // tyyl2iin Juice: saldo = 64.5, tilaa 123.5
+        return this.getNimi()+": "+super.toString();
+    }
+    
 }
