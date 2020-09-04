@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 /**
@@ -25,6 +26,45 @@ public class Muutoshistoria {
         // tyhjää muistin.
         this.muutoslista.clear();
     }
+    
+    
+    public double maxArvo() {
+        // palauttaa muutoshistorian suurimman arvon. 
+        // Jos historia on tyhjä, metodi palauttaa nollan.
+        if(this.muutoslista.isEmpty()) {
+            return 0;            
+        }else{
+            return Collections.max(this.muutoslista);
+        }
+        
+    }
+    
+    public double minArvo() {
+        // palauttaa muutoshistorian pienimmän arvon. 
+        // Jos historia on tyhjä, metodi palauttaa nollan
+        if(this.muutoslista.isEmpty()) {
+            return 0;            
+        }else{
+            return Collections.min(this.muutoslista);
+        }
+    }
+    public double keskiarvo() {
+        // palauttaa muutoshistorian arvojen keskiarvon. 
+        // Jos historia on tyhjä, metodi palauttaa nollan.
+        int lkm = 0;
+        double summa = 0;
+        for(double lista : this.muutoslista) {
+            if(this.muutoslista.isEmpty()) {
+                return 0;
+            }else{
+                lkm++;
+                summa += lista;
+            }
+        }
+        double keskiarvo = summa / lkm;
+        return keskiarvo;
+    }
+
     
     @Override
     public String toString() {
