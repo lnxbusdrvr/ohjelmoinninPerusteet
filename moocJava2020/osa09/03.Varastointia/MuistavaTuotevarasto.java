@@ -46,4 +46,15 @@ public class MuistavaTuotevarasto extends Tuotevarasto {
         return super.getSaldo();
     }
     
+    public void tulostaAnalyysi() {
+        // joka tulostaa tuotteeseen 
+        // liittyviä historiatietoja esimerkin esittämään tapaan.
+        System.out.println("Tuote: "+super.getNimi());
+        System.out.println("Historia: "+this.historia());
+        System.out.println("Suurin tuotemäärä: "+this.muutoshistoria.maxArvo());
+        System.out.println("Pienin tuotemäärä: "+this.muutoshistoria.minArvo());
+        System.out.println("Keskiarvo: "+this.muutoshistoria.keskiarvo());
+        
+    }
+    
 }
