@@ -10,16 +10,40 @@ public class MuistavaTuotevarasto extends Tuotevarasto {
     
     public MuistavaTuotevarasto(String tuotenimi, double tilavuus, double alkuSaldo) {
         super(tuotenimi, tilavuus);
-        this.muutoshistoria = new Muutoshistoria();
-        this.muutoshistoria.lisaa(alkuSaldo);
         // Kutsu Varasto-luokasta
         super.lisaaVarastoon(alkuSaldo);
+        this.muutoshistoria = new Muutoshistoria();
+        this.muutoshistoria.lisaa(alkuSaldo);
     }
     
     public String historia() {
         // palauttaa tuotehistorian tyyliin [0.0, 119.2, 21.2]. Käytä 
         // Muutoshistoria-olion merkkiesitystä sellaisenaan.
         return this.muutoshistoria.toString();
+    }
+    
+    @Override
+    public void lisaaVarastoon(double maara) {
+        // toimii kuin Varasto-luokan metodi, 
+        // mutta muuttunut tilanne kirjataan 
+        // historiaan.Huom: 
+        // historiaan tulee kirjata lisäyksen jälkeinen varastosaldo, 
+        // ei lisättävää määrää!
+        super.lisaaVarastoon(maara);
+        this.muutoshistoria.lisaa(super.getSaldo());
+    }
+    
+    @Override
+    public double otaVarastosta(double maara) {
+        // toimii kuin Varasto-luokan metodi, mutta muuttunut tilanne 
+        // kirjataan historiaan. Huom: historiaan tulee kirjata poiston 
+        // jälkeine varastosaldo, ei poistettavaa määrää!
+        if(maara > super.getSaldo()) {
+            return super.getSaldo();
+        }
+        super.otaVarastosta(maara);
+        this.muutoshistoria.lisaa(super.getSaldo());
+        return super.getSaldo();
     }
     
 }
