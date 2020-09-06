@@ -27,7 +27,7 @@ public class Tavara {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.nimi);
+        hash = 53 * hash + Objects.hashCode(this.nimi);
         return hash;
     }
 
