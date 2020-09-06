@@ -17,16 +17,6 @@ public class MaksimipainollinenLaatikko extends Laatikko {
         this.tavarat = new ArrayList<>();
     }
     
-    /**
-     *
-     * @param tavara
-     * @return
-     */
-    @Override
-    public boolean onkoLaatikossa(Tavara tavara) {
-       return this.tavarat.contains(tavara);
-    }
-
     @Override
     public void lisaa(Tavara tavara) {
         int paino = 0;
@@ -37,6 +27,16 @@ public class MaksimipainollinenLaatikko extends Laatikko {
         if((paino + tavara.getPaino() <= this.maksimipaino)) {
             this.tavarat.add(tavara);
         }               
+    }
+    
+    /**
+     *
+     * @param tavara
+     * @return
+     */
+    @Override
+    public boolean onkoLaatikossa(Tavara tavara) {
+       return this.tavarat.contains(tavara);
     }
     
 }
