@@ -4,7 +4,7 @@
  *
  * @author vadenn
  */
-public class Kirja implements Talletettava{
+public class Kirja implements Talletettava {
     String kirjoittaja;
     String teos;
     double paino;
