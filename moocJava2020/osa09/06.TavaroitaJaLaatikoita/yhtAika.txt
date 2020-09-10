@@ -1,0 +1,7 @@
+Tehtävän koodausaika (itse kirjoittamiseen siis) yhteensä
+18min 10sek
+Tehtävän ajatustyötä yhteensä
+31min 02sek
+
+Ratkaistuani osa 2:den lisaa()-metodia TMCbeans ilmoittikin,
+että kaikki tehtävät ovat suoritettu.
