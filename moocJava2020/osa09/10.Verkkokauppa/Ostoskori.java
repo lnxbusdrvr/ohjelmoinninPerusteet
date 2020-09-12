@@ -20,7 +20,18 @@ public class Ostoskori {
         // lisää ostoskoriin ostoksen joka vastaa 
         // parametrina olevaa tuotetta ja jolla on 
         // parametrina annettu hinta.
-        this.ostoskori.put(tuote, new Ostos(tuote, 1, hinta));
+        //this.ostoskori.put(tuote, new Ostos(tuote, 1, hinta));
+        
+        // Osa 7: Täydennetään siten, että jos korissa on jo tuote 
+        // joka sinne lisätään, ei koriin luoda uutta Ostos-olioa 
+        // vaan päivitetään jo korissa olevaa tuotetta vastaavaa 
+        // ostosolioa kutsumalla sen metodia kasvataMaaraa().
+        if(this.ostoskori.containsKey(tuote)) {
+            this.ostoskori.get(tuote).kasvataMaaraa();
+        }else{
+            this.ostoskori.put(tuote, new Ostos(tuote, 1, hinta));
+
+        }
     }
     
     public int hinta() {
