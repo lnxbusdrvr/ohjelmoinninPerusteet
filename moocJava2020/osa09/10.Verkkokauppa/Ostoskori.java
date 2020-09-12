@@ -32,6 +32,12 @@ public class Ostoskori {
         return summa;
     }
     
+    public void tulosta() {
+        // tulostaa korin sisältämät Ostos-oliot
+        for(Ostos tuote : this.ostoskori.values()) {
+            System.out.println(tuote);
+        }
+    }
     
     
 }
