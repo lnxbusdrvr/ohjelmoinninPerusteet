@@ -35,4 +35,30 @@ public class Varasto {
         return -99;
     }
     
+    public int saldo(String tuote) {
+        // palauttaa parametrina olevan tuotteen 
+        // varastosaldon. Jos tuotetta ei ole 
+        // varastossa lainkaan, tulee palauttaa 0.
+        if(this.saldo.containsKey(tuote)) {
+            return this.saldo.get(tuote);
+        }
+        return 0;
+    }
+    
+    public boolean ota(String tuote) {
+        // vähentää parametrina olevan 
+        // tuotteen saldoa yhdellä ja 
+        // palauttaa true jos tuotetta oli 
+        // varastossa. Jos tuotetta ei ole 
+        // varastossa, palauttaa metodi false, 
+        // tuotteen saldo ei saa laskea alle nollan.
+        if(this.saldo.containsKey(tuote)) {
+            if(this.saldo.get(tuote) >0) {
+                this.saldo.put(tuote, this.saldo.get(tuote) - 1);
+                return true;
+            }            
+        }
+        return false;
+    }
+    
 }
