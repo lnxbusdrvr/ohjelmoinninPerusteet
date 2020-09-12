@@ -1,0 +1,16 @@
+Tehtävän koodausaika (itse kirjoittamiseen siis) yhteensä
+26min 13sek
+Tehtävän ajatustyötä yhteensä
+1h 17min 56sek
+
+Vaiketa oli ymmärtää, esim. että Set<String> saa palautettua
+return this.saldo.keySet():llä
+
+Lause: "Metodi on helppo toteuttaa HashMapin avulla. 
+        Saat tietoon varastossa olevat tuotteet kysymällä 
+        ne joko hinnat tai saldot muistavalta Map:iltä 
+        metodin keySet avulla."
+
+Oli siis yhtä epäselvä.
+Kun etsii Telegramista vastauksia ja näki jonkun tehneen
+ratkaisun tähään. Oli tämä lause hyvin selvä.
