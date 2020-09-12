@@ -29,5 +29,8 @@ public class Paaohjelma {
 
     // toteuta tänne metodi palautaKoko, joka palauttaa parametrina 
     // saamansa set-olion alkioiden lukumäärän
+    public static int palautaKoko(Set set) {
+        return set.size();
+    }
 
 }
