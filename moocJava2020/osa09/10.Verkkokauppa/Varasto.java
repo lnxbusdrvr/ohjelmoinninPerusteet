@@ -1,6 +1,7 @@
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 
 
@@ -59,6 +60,12 @@ public class Varasto {
             }            
         }
         return false;
+    }
+    
+    public Set<String> tuotteet() {
+        // palauttaa joukkona varastossa 
+        // olevien tuotteiden nimet.
+        return this.saldo.keySet();
     }
     
 }
