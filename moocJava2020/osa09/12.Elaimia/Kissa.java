@@ -4,7 +4,7 @@
  *
  * @author lnxbusdrvr
  */
-public class Kissa extends Elain{
+public class Kissa extends Elain implements Aanteleva {
 
     public Kissa(String nimi) {
         super(nimi);
@@ -19,7 +19,9 @@ public class Kissa extends Elain{
     }
     
     
-    
-    
+    @Override
+    public void aantele() {
+        mourua();
+    }
     
 }

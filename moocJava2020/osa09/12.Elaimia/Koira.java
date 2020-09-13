@@ -4,7 +4,7 @@
  *
  * @author lnxbusdrvr
  */
-public class Koira extends Elain {
+public class Koira extends Elain implements Aanteleva {
 
     public Koira(String nimi) {
         super(nimi);
@@ -18,8 +18,9 @@ public class Koira extends Elain {
         System.out.println(super.getNimi()+" haukkuu");
     }
     
-    
-    
-    
+    @Override
+    public void aantele() {
+        hauku();
+    }
     
 }

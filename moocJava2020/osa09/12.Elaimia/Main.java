@@ -13,13 +13,23 @@ public class Main {
         vuffe.hauku();
         */
         
-        // Osa 3
+        /* Osa 3
         Kissa kissa = new Kissa();
         kissa.mourua();
         kissa.syo();
 
         Kissa karvinen = new Kissa("Karvinen");
         karvinen.mourua();
+        */
+        
+        // Osa 4
+        Aanteleva koira = new Koira();
+        koira.aantele();
+
+        Aanteleva kissa = new Kissa("Karvinen");
+        kissa.aantele();
+        Kissa k = (Kissa) kissa;
+        k.mourua();
 
     }
 
