@@ -12,7 +12,7 @@ public abstract class Elain {
     }
     
     public void syo() {
-        System.out.println("("+this.nimi+") syö");
+        System.out.println(this.nimi+" syo");
     }
     
     /**
