@@ -1,45 +1,3 @@
-/*
- *
- * Tehtävä: 02.TiettyjenLukujenKeskiarvo
- * -------------------------------------
- * Toteuta ohjelma, joka lukee käyttäjältä syötteitä. Jos käyttäjä 
- * syöttää merkkijonon "loppu", 
- * lukeminen lopetetaan. 
- * Muut syötteet ovat lukuja. Kun käyttäjä syöttää merkkijonon "loppu", 
- * syötteiden lukeminen lopetetaan.
- *
- * Tämän jälkeen käyttäjältä kysytään tulostetaanko negatiivisten vai 
- * positiivisten lukujen keskiarvo (n vai p). Jos käyttäjä syöttää 
- * merkkijonon "n", tulostetaan negatiivisten lukujen keskiarvo, 
- * muulloin tulostetaan positiivisten lukujen keskiarvo.
- *
- * Toteuta keskiarvon laskeminen sekä rajaus virran avulla!
- *
- * Esimerkkitulostus:
- *
- * Kirjoita syötteitä, "loppu" lopettaa.
- * -1
- * 1
- * 2
- * loppu
- *
- * Tulostetaanko negatiivisten vai positiivisten lukujen keskiarvo? (n/p)
- * n
- * Negatiivisten lukujen keskiarvo: -1.0
- *
- * Esimerkkitulostus:
- *
- * Kirjoita syötteitä, "loppu" lopettaa.
- * -1
- * 1
- * 2
- * loppu
- *
- * Tulostetaanko negatiivisten vai positiivisten lukujen keskiarvo? (n/p)
- * p
- * Positiivisten lukujen keskiarvo: 1.5
- *
- */
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -49,6 +7,32 @@ public class TiettyjenLukujenKeskiarvo {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
         // toteuta ohjelmasi tänne
-
+        ArrayList<Integer> negat = new ArrayList<>();
+        ArrayList<Integer> posit = new ArrayList<>();
+        
+        System.out.println("Kirjoita syötteitä, \"loppu\" lopettaa.");
+        while(true) {
+            String syote = lukija.nextLine();
+            if(syote.equals("loppu")) {
+                break;
+            }else{
+                int io = Integer.valueOf(syote);
+                if(io < 0) {
+                    negat.add(io);
+                }else{
+                    posit.add(io);
+                }
+            }
+        }
+        System.out.println("Tulostetaanko negatiivisten vai positiivisten lukujen keskiarvo? (n/p)");
+        String syote = lukija.nextLine();
+        
+        if(syote.equals("n")) {
+            System.out.println("Negatiivisten lukujen keskiarvo: " + negat.stream().mapToInt(n -> n).average().getAsDouble());
+        }else{
+            System.out.println("Positiivisten lukujen keskiarvo: " + posit.stream().mapToInt(n -> n).average().getAsDouble());
+            
+        }
+        
     }
 }
