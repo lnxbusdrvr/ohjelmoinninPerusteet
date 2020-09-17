@@ -28,5 +28,12 @@ public class UniikitSukunimet {
         }
 
         // toteuta uniikkien sukunimien tulostaminen aakkosjärjestyksessä tänne
+        // Ei talleteta muuttujaan, joten ei tarvitse erikseen uuttaa muuttujaa
+        henkilot.stream()
+                .map(h -> h.getSukunimi())
+                .distinct()
+                .sorted()
+                .forEach(h -> System.out.println(h));
+                
     }
 }
