@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,18 +12,25 @@ public class Paaohjelma {
         List<Kirja> kirja = new ArrayList<>();
               
         while(true) {
-            System.out.println("Syötä kirjan nimi, tyhjä lopettaa: ");
+            System.out.print("Syötä kirjan nimi, tyhjä lopettaa: ");
             String nimi = lukija.nextLine();
             if(nimi.equals("")) {
                 break;
             }
-            System.out.println("Syötä kirjan pienin kohdeikä: ");
+            System.out.print("Syötä kirjan pienin kohdeikä: ");
             int ika = Integer.valueOf(lukija.nextLine());
             kirja.add(new Kirja(nimi, ika));
+            
+            System.out.println();
         }
-        //System.out.println();
+        
         System.out.println("Yhteensä "+kirja.size()+" kirjaa.");
         System.out.println();
+        
+        Comparator<Kirja> vertailu = Comparator
+                .comparing(Kirja::getKohdeika);
+        
+        Collections.sort(kirja, vertailu);
         
         kirja.stream()
                 .forEach(k -> System.out.println(k));
