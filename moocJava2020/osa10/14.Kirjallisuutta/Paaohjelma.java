@@ -28,7 +28,8 @@ public class Paaohjelma {
         System.out.println();
         
         Comparator<Kirja> vertailu = Comparator
-                .comparing(Kirja::getKohdeika);
+                .comparing(Kirja::getKohdeika)
+                .thenComparing(Kirja::getNimi);
         
         Collections.sort(kirja, vertailu);
         
