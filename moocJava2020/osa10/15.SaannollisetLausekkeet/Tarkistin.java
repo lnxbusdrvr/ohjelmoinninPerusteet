@@ -15,5 +15,10 @@ public class Tarkistin {
         System.out.println("false");
         return false;*/
     }
+    
+    public boolean kellonaika(String merkkijono) {
+        return merkkijono
+            .matches("(0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])");
+    }
 
 }
