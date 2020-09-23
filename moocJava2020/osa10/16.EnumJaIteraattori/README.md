@@ -3,6 +3,10 @@
 Tehdään ohjelma pienen yrityksen henkilöstön hallintaan.
 
 ## Osa 1: Koulutus
+
+Tee lueteltu tyyppi eli enum `Koulutus` jolla on tunnukset i
+FT (tohtori), FM (maisteri), LuK (kandidaatti), FilYO (ylioppilas).
+
 ## Osa 2: Henkilo
 
 Tee luokka `Henkilo`. Henkilölle annetaan konstruktorin parametrina 
