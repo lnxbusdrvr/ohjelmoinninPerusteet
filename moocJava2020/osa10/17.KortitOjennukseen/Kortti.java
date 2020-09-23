@@ -41,16 +41,6 @@ public class Kortti implements Comparable<Kortti> {
     @Override
     public int compareTo(Kortti t) {
         // risti[0], ruutu[1], hertta[2], pata[3]
-        /*if(this.getArvo() < t.getArvo() 
-                && 
-                this.getMaa().ordinal() < t.getMaa().ordinal()) {
-            return -1;
-        }else if(this.getArvo() == t.getArvo() 
-                && 
-                this.getMaa().ordinal() == t.getMaa().ordinal()) {
-            return 0;
-        }
-        return 1;*/
         return this.getArvo() - t.getArvo()+(this.getMaa().ordinal()-t.getMaa().ordinal());
     }
 
