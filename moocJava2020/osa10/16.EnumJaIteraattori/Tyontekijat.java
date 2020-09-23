@@ -39,8 +39,18 @@ public class Tyontekijat {
             Henkilo apu = it.next();
             if(apu.getKoulutus().equals(koulutus)) {
                 System.out.println(apu);
-            }
-            
+            }            
+        }
+    }
+    
+    public void irtisano(Koulutus koulutus) {
+        Iterator<Henkilo> it = this.tyontekijat.iterator();
+        
+        while(it.hasNext()) {
+            Henkilo apu = it.next();
+            if(apu.getKoulutus().equals(koulutus)) {
+                it.remove();
+            }            
         }
     }
     
