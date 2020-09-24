@@ -45,4 +45,13 @@ public class Kasi implements Comparable<Kasi> {
         return this.summa()-t.summa();
     }
     
+    public void jarjestaMaittain() {
+        //Mikään ei toimi:
+        //this.kasi.sort(SamatMaatVierekkainArvojarjestykseen::compare);
+        Collections.sort(this.kasi, new SamatMaatVierekkainArvojarjestykseen());
+        /*SamatMaatVierekkainArvojarjestykseen samat = 
+                new SamatMaatVierekkainArvojarjestykseen();
+        Collections.sort(this.kasi, samat);*/
+    }
+    
 }

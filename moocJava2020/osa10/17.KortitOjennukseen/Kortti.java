@@ -43,5 +43,10 @@ public class Kortti implements Comparable<Kortti> {
         // risti[0], ruutu[1], hertta[2], pata[3]
         return this.getArvo() - t.getArvo()+(this.getMaa().ordinal()-t.getMaa().ordinal());
     }
+    
+    /*public static int SamatMaatVierekkainArvojarjestykseen(Kortti k1, Kortti k2) {
+        return k1.getMaa().ordinal() - k2.getMaa().ordinal()
+                +(k1.getArvo() - k2.getArvo());
+    }*/
 
 }
