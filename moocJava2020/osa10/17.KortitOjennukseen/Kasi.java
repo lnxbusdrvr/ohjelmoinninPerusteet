@@ -35,7 +35,7 @@ public class Kasi implements Comparable<Kasi> {
     public int summa() {        
         int summa = 0;
         summa = this.kasi.stream()
-                .map(Kortti::getArvo)
+                .map((kortti) -> kortti.getArvo())
                 .reduce(summa, Integer::sum);
         return summa;
     }
