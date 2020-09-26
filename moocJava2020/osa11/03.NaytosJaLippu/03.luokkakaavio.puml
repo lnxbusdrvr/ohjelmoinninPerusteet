@@ -1,0 +1,13 @@
+@startuml
+class Naytos {
+-elokuva: String
+-aika: String
+}
+
+class Lippu {
+-paikka: int
+-koodi: int
+}
+
+Naytos <- "*"Lippu
+@enduml
