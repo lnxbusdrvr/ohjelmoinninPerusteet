@@ -1,0 +1,14 @@
+@startuml
+
+class Henkilo implements Tallennettava{
+-nimi:String
+-osoite:String
+}
+
+interface Tallennettava <<Interface>> {
++tallenna():void
++poista():void
++lataa(osoite: String):void
+}
+
+@enduml
