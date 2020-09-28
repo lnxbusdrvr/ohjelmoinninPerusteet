@@ -1,0 +1,12 @@
+@startuml
+class Opiskelija {
+-opiskelijanumero: int
+-nimi: String
+}
+
+class Korkeakoulu {
+-nimi: int
+}
+ 
+Opiskelija "*"  - Korkeakoulu
+@enduml
