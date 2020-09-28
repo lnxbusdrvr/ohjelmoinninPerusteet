@@ -1,9 +1,13 @@
- 
-import java.util.List;
 
+import java.util.ArrayList;
+
+
+/**
+ *
+ * @author lnxbusdrvr
+ */
 public class Korkeakoulu {
-
     private String nimi;
-    private List<Opiskelija> opiskelijat;
+    ArrayList<Opiskelija> opiskelija;
+    
 }
-
