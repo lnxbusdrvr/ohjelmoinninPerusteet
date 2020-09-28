@@ -1,0 +1,14 @@
+@startuml
+class Pelaaja {
+-nimi: String
++pelaa():void
++tulostaNimi():void
+}
+
+class Tekoaly {
++pelaa():void
++lisaaSiirto(siirto: String):void
+}
+ 
+Pelaaja <|-right- Tekoaly
+@enduml
