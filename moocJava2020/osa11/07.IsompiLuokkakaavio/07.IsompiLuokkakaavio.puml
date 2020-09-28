@@ -1,0 +1,17 @@
+@startuml
+
+class A implements IA
+Interface IA <<Interface>>
+class B implements IB
+Interface IB <<Interface>>
+class C implements IC
+Interface IC <<Interface>>
+
+class D
+class E
+D -> IA
+E "*" - "*" C
+C -|> B
+B -|> A
+
+@enduml
