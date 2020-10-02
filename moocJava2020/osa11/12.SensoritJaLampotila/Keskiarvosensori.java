@@ -3,6 +3,7 @@ package sovellus;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -11,9 +12,11 @@ import java.util.OptionalDouble;
 public class Keskiarvosensori implements Sensori {
     
     private List<Sensori> sensorit;
+    private List<Integer> mittaukset;
 
     public Keskiarvosensori() {
         this.sensorit = new ArrayList<>();
+        this.mittaukset = new ArrayList<>();
     }
 
     @Override
@@ -40,15 +43,25 @@ public class Keskiarvosensori implements Sensori {
 
     @Override
     public int mittaa() {
-        double ka = this.sensorit.stream()
+        /*double ka = this.sensorit.stream()
                 .mapToInt(s -> s.mittaa())
                 .average()
-                .getAsDouble();
-        return (int)ka;
+                .getAsDouble();*/
+        int summa = 0;
+        summa = this.sensorit.stream()
+                .map((s) -> s.mittaa())
+                .reduce(summa, Integer::sum);
+        this.mittaukset.add(summa / this.sensorit.size());
+                
+        return (int)summa / this.sensorit.size();
     }
     
     public void lisaaSensori(Sensori lisattava) {
         this.sensorit.add(lisattava);
+    }
+    
+    public List<Integer> mittaukset() {
+        return this.mittaukset;
     }
     
 }
