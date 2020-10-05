@@ -38,4 +38,13 @@ public class MuistavaSanakirja {
         return null;
     }
     
+    public void poista(String sana) {
+        // Poista ensiksi V, sen jälkeen K
+        if(this.sanakirja.containsValue(sana)) {
+            this.sanakirja.remove(this.sanakirja.get(sana));
+        }if(this.sanakirja.containsKey(sana)) {
+            this.sanakirja.remove(sana);
+        }
+    }
+    
 }
