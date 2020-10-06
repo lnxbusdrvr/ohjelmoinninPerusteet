@@ -1,8 +1,10 @@
 package sanakirja;
 
+import java.io.PrintWriter;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.function.BiConsumer;
 
 /**
  *
@@ -10,24 +12,20 @@ import java.util.Scanner;
  */
 public class MuistavaSanakirja {
     private HashMap<String, String> sanakirja;
-    private HashMap<String, String> sanakirjaTiedostosta;
     private String tiedosto;
 
     public MuistavaSanakirja() {
         this.sanakirja = new HashMap<>();
-        this.sanakirjaTiedostosta = new HashMap<>();
     }
 
     public MuistavaSanakirja(String tiedosto) {
         this.sanakirja = new HashMap<>();
-        this.sanakirjaTiedostosta = new HashMap<>();
         this.tiedosto = tiedosto;
     }    
         
     public void lisaa(String sana, String kaannos) {
-        // Ensi kerralla lue paremmin ohjeet
-        // kun tämä metodi oli vääriin niin tähään kului taas tunt(e)i aikaa
-        if(!this.sanakirja.containsKey(sana)) {
+        if(!(this.sanakirja.containsKey(sana))
+                && !(this.sanakirja.containsValue(kaannos))) {
             this.sanakirja.put(sana, kaannos);
         }        
     }
@@ -50,11 +48,46 @@ public class MuistavaSanakirja {
     }
     
     public void poista(String sana) {
-        // Poista ensiksi V, sen jälkeen K
-        if(this.sanakirja.containsValue(sana)) {
-            this.sanakirja.remove(this.sanakirja.get(sana));
-        }if(this.sanakirja.containsKey(sana)) {
-            this.sanakirja.remove(sana);
+        try{
+            String kaannos = this.sanakirja.get(sana);
+            // Jos avain sisältää sanan
+            if(this.sanakirja.containsKey(sana)) {
+                // poista avain, käännös
+                this.sanakirja.remove(sana, kaannos);
+            }if(this.sanakirja.containsValue(sana)) {
+                // tämä ei toteudu
+                //this.sanakirja.remove(kaannos, sana);
+                /*for(String v : this.sanakirja.values()) {
+                    // Jos Value on sama kuin sana
+                    if(v.equals(kaannos)) {
+                        // Poista avain
+                        this.sanakirja.remove(sana);
+                        //this.sanakirja.remove(kaannos);
+                        System.out.println("Sana: "+sana);
+                        System.out.println("v: "+v);
+                    }
+                }*/
+                this.sanakirja.forEach((avain, tieto) -> {
+                    if(tieto.equals(sana)) {
+                        this.sanakirja.remove(avain);
+                    }
+                });
+            }
+            
+            // tämä ei toteudu
+            //this.sanakirja.remove(kaannos, sana);
+            /*for(String v : this.sanakirja.values()) {
+                // Jos Value on sama kuin sana
+                if(v.equals(kaannos)) {
+                    // Poista avain
+                    this.sanakirja.remove(sana);
+                    //this.sanakirja.remove(kaannos);
+                    System.out.println("Sana: "+sana);
+                    System.out.println("v: "+v);
+                }
+            }*/
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
     
@@ -73,9 +106,30 @@ public class MuistavaSanakirja {
             return true;
         }catch (Exception e) {
             return false;
-        }finally{
-            
         }
     }
+    
+    public boolean tallenna() {
+        try{
+            PrintWriter kirjoittaja = new PrintWriter(this.tiedosto);
+            for(String k : this.sanakirja.keySet()) {
+                kirjoittaja.println(k+":"+this.sanakirja.get(k));
+            }
+            kirjoittaja.close();
+            
+            return true;
+        }catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public void tulosta() {
+        String mjono;
+        for(String a : this.sanakirja.keySet()) {
+            System.out.println(a+":"+this.sanakirja.get(a));
+        }
+        //System.out.println(mjono);
+    }
+    
     
 }
