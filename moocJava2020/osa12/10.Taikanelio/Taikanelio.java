@@ -17,7 +17,16 @@ public class Taikanelio {
 
     // toteuta nämä kolme metodia
     public ArrayList<Integer> rivienSummat() {
-        return new ArrayList<>();
+        ArrayList<Integer> lista = new ArrayList<>();
+        int summa = 0;
+        for(int rivi = 0; rivi < this.nelio.length; rivi++) {
+            for(int sarake = 0; sarake < this.nelio[rivi].length; sarake++) {
+                summa += this.nelio[rivi][sarake];
+            }
+            lista.add(summa);
+            summa = 0;
+        }
+        return lista;
     }
 
     public ArrayList<Integer> sarakkeidenSummat() {
