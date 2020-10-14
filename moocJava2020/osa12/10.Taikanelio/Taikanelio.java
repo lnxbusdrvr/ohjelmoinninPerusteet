@@ -30,7 +30,17 @@ public class Taikanelio {
     }
 
     public ArrayList<Integer> sarakkeidenSummat() {
-        return new ArrayList<>();
+        ArrayList<Integer> lista = new ArrayList<>();
+        int summa = 0;
+        for(int rivi = 0; rivi < this.nelio.length; rivi++) {
+            for(int sarake = 0; sarake < this.nelio[rivi].length; sarake++) {
+                // Lasketaan sarakkeiden summa
+                summa += this.nelio[sarake][rivi];
+            }
+            lista.add(summa);
+            summa = 0;
+        }
+        return lista;
     }
 
     public ArrayList<Integer> lavistajienSummat() {
