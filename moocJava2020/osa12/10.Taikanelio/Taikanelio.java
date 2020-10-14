@@ -44,7 +44,30 @@ public class Taikanelio {
     }
 
     public ArrayList<Integer> lavistajienSummat() {
-        return new ArrayList<>();
+        ArrayList<Integer> lista = new ArrayList<>();
+        int summa = 0;
+        int rivi = 0;
+        int sarake = 0;
+        for(rivi = 0; rivi < this.nelio.length; rivi++) {
+                System.out.println("Lisätään summa; "+this.nelio[rivi][sarake]);
+                summa += this.nelio[rivi][sarake];
+                sarake++;
+        }
+        System.out.println("Summaksi tuli: "+summa);
+        lista.add(summa);
+        summa = 0;
+        
+        // Toisin päin
+        for(rivi = 0; rivi < this.nelio.length; rivi++) {
+            for(sarake = this.nelio.length-1; sarake > 0; sarake--) {
+                summa += this.nelio[sarake][rivi];
+                rivi++;
+                
+            }
+            summa += this.nelio[sarake][rivi];
+        }
+        lista.add(summa);
+        return lista;
     }
 
     // valmiit apumetodit -- älä koske näihin

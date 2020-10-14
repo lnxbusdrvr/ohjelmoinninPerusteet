@@ -1,10 +1,13 @@
 
+import java.util.ArrayList;
+
+
 public class Ohjelma {
 
     public static void main(String[] args) {
         // Testaa Taikanelio-luokkaasi täällä
 
-        Taikaneliotehdas tt = new Taikaneliotehdas();
-        System.out.println(tt.luoTaikanelio(5));
+        /*Taikaneliotehdas tt = new Taikaneliotehdas();
+        System.out.println(tt.luoTaikanelio(5));*/
     }
 }
