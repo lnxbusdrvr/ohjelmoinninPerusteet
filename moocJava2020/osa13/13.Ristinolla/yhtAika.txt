@@ -1,0 +1,15 @@
+Koodausaika yhteensä (itse kirjoittamiseen näppiksen hakkamiseen siis) yht:
+1h 11min 45sek 
+Tehtävän ajatustyötä yhteensä noin
+3h 22min 38sek 
+
+HUOM! Kaikki ajat ovat viittelisiä aikoja
+
+Tässä tehtävässä meni aikaa, mutta oli kyllä kiva.
+Koodi voi toki olla kauniimpaa. Nyt on paljon toistoja.
+
+Mietin alussa vaihtoehtoje, jos saisin tehtyä
+napit for-loopin sisällä, jolloin muuttujan nimi olisi
+luotu loopin sisällä samalla tavalla: nappi11, nappi12, nappi13 jne.
+tämä tapa on nimeltään "increment variable names is loop" ja tätä ei ole
+tuettu Javassa. Joten tein sitten sellaisen koodin, jonka osaan tehdä.
