@@ -23,8 +23,13 @@ public class RistinollaSovellus extends Application {
     public void start(Stage ikkuna)  {
         BorderPane asettelu = new BorderPane();
         
-        Label ylateksti = new Label("Vuoro: ");
+        String x = "X";
+        String o = "O";
+        String xVuoro = "Vuoro: "+x;
+        String oVuoro = "Vuoro: "+o;
+        Label ylateksti = new Label(xVuoro);
         //Label vuoro = new Label("X");
+        
         
         ylateksti.setFont(Font.font("Monospaced", 40));
                      
@@ -90,7 +95,139 @@ public class RistinollaSovellus extends Application {
         asettelu.setTop(ylateksti);
         asettelu.setCenter(ristikko);
         
-        Scene nakyma = new Scene(asettelu, 350, 350);
+        // Ruma koodi alkaa
+        // Rivi 1
+        nappi11.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi11.getText().equals(" ")) {
+                    nappi11.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi11.getText().equals(" ")) {
+                    nappi11.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        
+        nappi12.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi12.getText().equals(" ")) {
+                    nappi12.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi12.getText().equals(" ")) {
+                    nappi12.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        
+        nappi13.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi13.getText().equals(" ")) {
+                    nappi13.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi13.getText().equals(" ")) {
+                    nappi13.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        //  Rivi 1 Loppuu
+        
+        // Rivi 2
+        nappi21.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi21.getText().equals(" ")) {
+                    nappi21.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi21.getText().equals(" ")) {
+                    nappi21.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        
+        nappi22.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi22.getText().equals(" ")) {
+                    nappi22.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi22.getText().equals(" ")) {
+                    nappi22.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        
+        nappi23.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi23.getText().equals(" ")) {
+                    nappi23.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi23.getText().equals(" ")) {
+                    nappi23.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        //  Rivi 2 Loppuu
+        
+        // Rivi 3
+        nappi31.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi31.getText().equals(" ")) {
+                    nappi31.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi31.getText().equals(" ")) {
+                    nappi31.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });        
+        nappi32.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi32.getText().equals(" ")) {
+                    nappi32.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi32.getText().equals(" ")) {
+                    nappi32.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        nappi33.setOnMouseClicked((event) -> {
+            if(ylateksti.getText().equals(xVuoro)) {
+                if(nappi33.getText().equals(" ")) {
+                    nappi33.setText(x);
+                    ylateksti.setText(oVuoro);
+                }
+            }else {
+                if(nappi33.getText().equals(" ")) {
+                    nappi33.setText(o);
+                    ylateksti.setText(xVuoro);
+                }
+            }
+        });
+        //  Rivi 3 Loppuu
+        // Ruma koodi loppuu
+        
+        Scene nakyma = new Scene(asettelu, 300, 330);
         
         ikkuna.setScene(nakyma);
         ikkuna.show();
