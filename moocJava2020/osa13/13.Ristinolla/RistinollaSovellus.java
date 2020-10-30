@@ -12,7 +12,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class RistinollaSovellus extends Application {
-
+    private int nappilaskuri;
 
     public static void main(String[] args) {
         System.out.println("Ohjelma alkaa!");
@@ -22,17 +22,17 @@ public class RistinollaSovellus extends Application {
     @Override
     public void start(Stage ikkuna)  {
         BorderPane asettelu = new BorderPane();
-        
+                
         String x = "X";
         String o = "O";
         String xVuoro = "Vuoro: "+x;
         String oVuoro = "Vuoro: "+o;
         Label ylateksti = new Label(xVuoro);
-        //Label vuoro = new Label("X");
         
-        
+        // Asetetaan ylätekstin fontti
         ylateksti.setFont(Font.font("Monospaced", 40));
                      
+        // Luodaan ristikko nappeja varten
         GridPane ristikko = new GridPane();
         
         // Asetetaan ristikon napit        
@@ -47,6 +47,7 @@ public class RistinollaSovellus extends Application {
             }
         }*/
         
+        // Luodaan napit
         // Napit, rivi 1
         Button nappi11 = new Button(" ");
         Button nappi12 = new Button(" ");
@@ -62,17 +63,17 @@ public class RistinollaSovellus extends Application {
         Button nappi32 = new Button(" ");
         Button nappi33 = new Button(" ");
         
-        // Asetetaan fontit, rivi 1
+        // Asetetaan napeille fontit, rivi 1
         nappi11.setFont(Font.font("Monospaced", 40));
         nappi21.setFont(Font.font("Monospaced", 40));
         nappi31.setFont(Font.font("Monospaced", 40));
         
-        // Asetetaan fontit, rivi 2
+        // Asetetaan napeille fontit, rivi 2
         nappi12.setFont(Font.font("Monospaced", 40));
         nappi22.setFont(Font.font("Monospaced", 40));
         nappi32.setFont(Font.font("Monospaced", 40));
         
-        // Asetetaan fontit, rivi 3
+        // Asetetaan napeille fontit, rivi 3
         nappi13.setFont(Font.font("Monospaced", 40));
         nappi23.setFont(Font.font("Monospaced", 40));
         nappi33.setFont(Font.font("Monospaced", 40));
@@ -88,54 +89,68 @@ public class RistinollaSovellus extends Application {
         ristikko.add(nappi32, 2, 3);
         ristikko.add(nappi33, 3, 3);
         
+        // Muotoillaan ristikon välejä ja asetetaan ristikko keskelle
         ristikko.setHgap(10);
         ristikko.setVgap(10);
         ristikko.setAlignment(Pos.CENTER);
         
-        asettelu.setTop(ylateksti);
-        asettelu.setCenter(ristikko);
+        // Nappilaskuri aloitetaan nollasta
+        this.nappilaskuri = 0;
         
-        // Ruma koodi alkaa
+        // Nappien toiminnallisuus
+        // Oispa mahdollista luoda loopilla 
+        // increment variable names, 
+        // saisi kätevämmin luotua tänän.
         // Rivi 1
         nappi11.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi11.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi11.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi11.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi11.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
-        
         nappi12.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi12.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi12.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi12.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi12.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
-        
         nappi13.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi13.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi13.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi13.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi13.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
         //  Rivi 1 Loppuu
@@ -144,42 +159,52 @@ public class RistinollaSovellus extends Application {
         nappi21.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi21.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi21.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi21.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi21.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
-        
         nappi22.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi22.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi22.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi22.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi22.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
-        
         nappi23.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi23.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi23.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi23.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi23.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
         //  Rivi 2 Loppuu
@@ -188,44 +213,58 @@ public class RistinollaSovellus extends Application {
         nappi31.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi31.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi31.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi31.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi31.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });        
         nappi32.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi32.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi32.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi32.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi32.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
         nappi33.setOnMouseClicked((event) -> {
             if(ylateksti.getText().equals(xVuoro)) {
                 if(nappi33.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi33.setText(x);
                     ylateksti.setText(oVuoro);
                 }
             }else {
                 if(nappi33.getText().equals(" ")) {
+                    this.nappilaskuri++;
                     nappi33.setText(o);
                     ylateksti.setText(xVuoro);
                 }
+            }if(this.nappilaskuri == 9) {
+                ylateksti.setText("Loppu!");
             }
         });
         //  Rivi 3 Loppuu
-        // Ruma koodi loppuu
+        
+        asettelu.setTop(ylateksti);
+        asettelu.setCenter(ristikko);
         
         Scene nakyma = new Scene(asettelu, 300, 330);
         
