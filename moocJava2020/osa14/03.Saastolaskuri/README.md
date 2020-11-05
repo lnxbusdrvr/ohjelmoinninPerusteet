@@ -6,7 +6,7 @@ mahdollisuuden sekä kuukausittaisen säästön määrittelyyn että vuosittaise
 koron määrittelyyn, ja näyttää säästösumman kasvun kolmenkymmenen vuoden 
 aikana yli.
 
-![Valmis kaavio](03.Saastolaskuri/kaavio0.png)
+![Valmis kaavio](kaavio0.png)
 
 
 ## Osa 1: Käyttöliittymä
@@ -32,7 +32,7 @@ Y-akselin arvojen tulee mukautua näytettäviin arvoihin.
 
 Sovellus näyttää tämän vaiheen jälkeen seuraavalta.
 
-![Kuva vaihe 1](03.Saastolaskuri/kaavio1.png)
+![Kuva vaihe 1](kaavio1.png)
 
 ## Osa 2: Tallennusten näyttäminen
 
