@@ -1,0 +1,18 @@
+Koodausaika yhteensä (itse kirjoittamiseen näppiksen hakkamiseen siis) yht:
+1h 0min 57ek 
+Tehtävän ajatustyötä yhteensä noin
+4h 31min 18sek 
+
+HUOM! Kaikki ajat ovat viittelisiä aikoja
+
+Sain näköjään aikaisemmin ohjelman valmiiksi ja luvut näkyivät oikein.
+
+Alkuperäinen ohjelma näytti 30-kohdalla 125 000, mutta minulla näkyi
+30-kohdalla 110 000. Tämän fixamiseen kului aikaa, vaikka ohjelma oli
+jo silloin lukujen osalta valmis.
+
+Täytyi säätää spacingia ja paddingia, sekä poistaa animaatio käytöstä
+tällöin kaikki näkyi oikein (30, 125 000).
+
+Kun sain käyttöliittymän valmiiksi ensimäisessa osassa, testit olivatkin
+kaikki läpäisty, tämä johtui testiohjelmassa olevasta bugista.
