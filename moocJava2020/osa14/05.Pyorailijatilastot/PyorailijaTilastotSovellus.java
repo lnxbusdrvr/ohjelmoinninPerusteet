@@ -6,7 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
+import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
@@ -42,8 +42,9 @@ public class PyorailijaTilastotSovellus extends Application {
         yAkseli.setLabel("Pyöräilijöitä");
 
         
-        LineChart<String, Number> kaavio = new LineChart<>(xAkseli, yAkseli);
+        BarChart<String, Number> kaavio = new BarChart<>(xAkseli, yAkseli);
         kaavio.setLegendVisible(false);
+        kaavio.setAnimated(false);
 
         lista.setOnMouseClicked((MouseEvent event) -> {
             String valittu = lista.getSelectionModel().getSelectedItem();
@@ -61,6 +62,7 @@ public class PyorailijaTilastotSovellus extends Application {
         gridPane.add(kaavio, 1, 0, 1, 2);
 
         Scene nakyma = new Scene(gridPane);
+        ikkuna.sizeToScene();
 
         ikkuna.setScene(nakyma);
         ikkuna.show();
