@@ -1,7 +1,10 @@
 package asteroids;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -19,8 +22,18 @@ public class AsteroidsSovellus extends Application {
         // Luodaan Alus
         Alus alus = new Alus(150, 100);
         
-        // Lisätään alus ruutuun
+        // Luodaan Asteroidit ja asetetaan ne listalle        
+        List<Asteroidi> asteroidit = new ArrayList<>();
+        
+        for(int i = 0; i < 5; i++) {
+            Random satunnainen = new Random();
+            Asteroidi asteroidi = new Asteroidi(satunnainen.nextInt(100), satunnainen.nextInt(100));
+            asteroidit.add(asteroidi);
+        }
+        
+        // Lisätään alus ja asteroidi ruutuun
         ruutu.getChildren().add(alus.getHahmo());
+        asteroidit.forEach(asteroidi -> ruutu.getChildren().add(asteroidi.getHahmo()));
         
         Scene nakyma = new Scene(ruutu);
         
@@ -70,6 +83,16 @@ public class AsteroidsSovellus extends Application {
                 
                 // Asetetaan alus liikkumaan
                 alus.liiku();
+                // Kaikki asteroidit liikkuu
+                asteroidit.forEach(asteroidi -> asteroidi.liiku());
+                
+                // Jos törmää yhteenkään asteroidiin
+                asteroidit.forEach(asteroidi -> {
+                    if(alus.tormaa(asteroidi)) {
+                        // niin peli animaatio loppu, eli peli loppuu
+                        stop();
+                    }
+                });
                 
             }
            
@@ -90,7 +113,7 @@ public class AsteroidsSovellus extends Application {
 
     public static int osiaToteutettu() {
         // Ilmoita tämän metodin palautusarvolla kuinka monta osaa olet tehnyt
-        return 2;
+        return 3;
     }
 
     
