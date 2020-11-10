@@ -7,7 +7,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 
 public class AsteroidsSovellus extends Application {
@@ -17,15 +16,11 @@ public class AsteroidsSovellus extends Application {
         Pane ruutu = new Pane();
         ruutu.setPrefSize(600, 400);
         
-        // Alus
-                                        // Octaconista tehdään kolmio
-        Polygon alus = new Polygon(-5, -5, 10, 0, -5, 5);
-        //missä kohdassa alus on ruudulla
-        alus.setTranslateX(300);//Leveys
-        alus.setTranslateY(200);  //Korkeus
+        // Luodaan Alus
+        Alus alus = new Alus(150, 100);
         
         // Lisätään alus ruutuun
-        ruutu.getChildren().add(alus);
+        ruutu.getChildren().add(alus.getHahmo());
         
         Scene nakyma = new Scene(ruutu);
         
@@ -42,6 +37,7 @@ public class AsteroidsSovellus extends Application {
             painetutNapit.put(tapahtuma.getCode(), Boolean.FALSE);
         });
         
+        
         // Annetaan animation luomiselle tarkoitetulle
         // AnimationTimer-luokalle toiminta, joka kääntää aluksen,
         // jos nappi on pohjassa tai ei
@@ -55,21 +51,31 @@ public class AsteroidsSovellus extends Application {
                 if((painetutNapit.getOrDefault(KeyCode.LEFT, Boolean.FALSE)) 
                         || 
                         (painetutNapit.getOrDefault(KeyCode.H, Boolean.FALSE))) {
-                    alus.setRotate(alus.getRotate() - 5);
+                    alus.kaannaVasemmalle();
                 }
                 
                 // Oikealle, Oikea nuoli ja l-kirjain
                 if(painetutNapit.getOrDefault(KeyCode.RIGHT, Boolean.FALSE) 
                         ||
                         (painetutNapit.getOrDefault(KeyCode.L, Boolean.FALSE))) {
-                    alus.setRotate(alus.getRotate() + 5);
+                    alus.kaannaOikealle();
                 }
+                
+                // Alus liikkuu kärjen suuntaisesti käyttäen ylänappia ja k:ta
+                if(painetutNapit.getOrDefault(KeyCode.UP, Boolean.FALSE) 
+                        ||
+                        (painetutNapit.getOrDefault(KeyCode.K, Boolean.FALSE))) {
+                    alus.kiihdyta();
+                }
+                
+                // Asetetaan alus liikkumaan
+                alus.liiku();
                 
             }
            
         }.start();      
         // Toiminto loppuu
-        // Aluksen kääntö alkaa
+        // Aluksen kääntö loppuu
         
         ikkuna.setTitle("Asteroids!");
         ikkuna.setScene(nakyma);
@@ -84,7 +90,7 @@ public class AsteroidsSovellus extends Application {
 
     public static int osiaToteutettu() {
         // Ilmoita tämän metodin palautusarvolla kuinka monta osaa olet tehnyt
-        return 1;
+        return 2;
     }
 
     
