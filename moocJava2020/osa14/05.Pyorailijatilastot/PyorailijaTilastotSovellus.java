@@ -62,7 +62,7 @@ public class PyorailijaTilastotSovellus extends Application {
         gridPane.add(kaavio, 1, 0, 1, 2);
 
         Scene nakyma = new Scene(gridPane);
-        ikkuna.sizeToScene();
+        //ikkuna.sizeToScene();
 
         ikkuna.setScene(nakyma);
         ikkuna.show();
