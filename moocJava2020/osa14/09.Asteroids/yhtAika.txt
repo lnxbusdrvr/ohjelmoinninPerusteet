@@ -1,0 +1,19 @@
+Koodausaika yhteensä (itse kirjoittamiseen näppiksen hakkamiseen siis) yht:
+2h 31min 2sek 
+Tehtävän ajatustyötä yhteensä noin
+5h 25min 12sek 
+
+HUOM! Kaikki ajat ovat viittelisiä aikoja
+
+Tässä tehtävässä meni myös aikaa. Olisin toki voinut nopeasti
+copy-pastettaa koodin, mutta halusin syvällisesti ymmärtää myös jotain
+ja lisäksi tein lisäyksi mm. ääniefektit, lopussa GAME OVER-teksti
+ja peliä voi pelata 
+                    unix-tyylillä: j=vasen, k=ylös, l=oikea
+                    nuolinäppäimillä
+                    ja awd-näppäimillä
+
+Koodi sisältää myös paljon kommentointia, jotta siitä ymmärtää 
+aloittelijakin jne.
+Koodi on pääosin kirjoitettu itse, copy-pastea harrastin vähemmän.
+Toki ns. copywriteria on paljon, lisäyksiä lukuunottamatta, melkein kaikki.
